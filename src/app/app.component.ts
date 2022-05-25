@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DPSCalc-v2';
+  title = 'DPSCalc';
+  public dpsForm = new FormGroup({
+    cd: new FormControl(0, [Validators.required]),
+    ct: new FormControl(0, [Validators.required]),
+    dmg_low: new FormControl(0, [Validators.required]),
+    dmg_high: new FormControl(0, [Validators.required]),
+  })
 }
