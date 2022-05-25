@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

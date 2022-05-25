@@ -1,16 +1,51 @@
-<div>
-  <label>cooldown: </label>
-  <input type="number" id="cd">
+<div class="container-fluid">
+ <form [formGroup]="dpsForm">
+
+   <div class="col-5 p-5">
+     <h3>Spell Info</h3>
+  <div class="p-2">
+    <label class="col-4">Cooldown: </label>
+    <input class="col-3" type="number" step=".1" id="cd" formControlName="cd">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Cast Time: </label>
+    <input class="col-3" type="number" step=".1" id="ct" formControlName="ct">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Damage (Low): </label>
+    <input class="col-3" type="number" step="1" id="dmg-low" formControlName="dmg-low">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Damage (High): </label>
+    <input class="col-3" type="number" step="1" id="dmg-high" formControlName="dmg-high">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Encouter? </label>
+    <input class="col-1" type="checkbox" id="encounter" formControlName="encounter">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Aoe? </label>
+    <input class="col-1" type="checkbox" id="aoe" formControlName="aoe">
+  </div>
 </div>
-<div>
-  <label>cast time: </label>
-  <input type="number" id="ct">
+<div class="col-5 px-5">
+  <h3>Fight Info</h3>
+  <div class="p-2">
+    <label class="col-4">Duration: </label>
+    <input class="col-3" type="number" step=".1" id="duration" formControlName="duration">
+  </div>
+  <div class="p-2">
+    <label class="col-4">Total Mobs: </label>
+    <input class="col-3" type="number" step="1" id="total_mobs" formControlName="total_mobs">
+  </div>
 </div>
-<div>
-  <label>damage low: </label>
-  <input type="number" id="dmg-low">
+<button type="button">Calculate</button>
+</form>
 </div>
-<div>
-  <label>damage high: </label>
-  <input type="number" id="dmg-high">
-</div>
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
