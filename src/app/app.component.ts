@@ -163,8 +163,7 @@ export class AppComponent implements OnInit {
       const linkedMobs = this.fightForm?.controls['linked_mobs'];
 
       if (linkedMobs?.value > totalMobs?.value) {
-        this.addCustomError(totalMobs, { linkedGreaterThanTotal: true });
-        this.addCustomError(linkedMobs, { linkedGreaterThanTotal: true });
+        totalMobs.setValue(linkedMobs.value)
 
 
         if(linkedMobs.touched || totalMobs.touched) {
@@ -172,13 +171,13 @@ export class AppComponent implements OnInit {
           totalMobs.markAsTouched();
         }
 
-        return { fgMobsError: true }
+        // return { fgMobsError: true }
         }
 
-        if (linkedMobs && totalMobs) {
-          linkedMobs.setErrors(null)
-          totalMobs.setErrors(null)
-        }
+        // if (linkedMobs && totalMobs) {
+        //   linkedMobs.setErrors(null)
+        //   totalMobs.setErrors(null)
+        // }
 
       return null;
     };
