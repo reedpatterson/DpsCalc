@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
   public spellForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     ct: new FormControl(0, [Validators.required, Validators.min(.1)]),
-    cd: new FormControl(0, [Validators.required, Validators.min(.1)]),
+    cd: new FormControl(10, [Validators.required, Validators.min(.1)]),
     dot: new FormControl(false, [this.dotValidator()]),
     dot_dmg_low: new FormControl(0, [Validators.required, Validators.min(1)]),
     dot_dmg_high: new FormControl(0, [Validators.required, Validators.min(1)]),
