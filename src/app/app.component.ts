@@ -12,7 +12,13 @@ export class AppComponent implements OnInit {
   //todo hoverover to see spell details?
   title = 'DPSCalc';
 
-  spellArray: Spell[] = [{
+  spellArray: Spell[] = [];
+  spellDPSArray: SpellDPS[] = [];
+
+  fightInfo?: FightInfo;
+
+  /*
+  {
     "name": "gs",
     "ct": 2,
     "cd": 2,
@@ -27,13 +33,7 @@ export class AppComponent implements OnInit {
     "type": "enc",
     "max_targets": undefined,
      show_card: false,
-}];
-  spellDPSArray: SpellDPS[] = [];
-
-  fightInfo?: FightInfo;
-
-  //{ type: 'st', ct: 1, dmg_high: 2, dmg_low:1, name: 'fireball', max_targets: 1},
-  //{ type: 'st', ct: 1, dmg_high: 2, dmg_low:1, name: 'icestorm', max_targets: 1}
+}*/
 
   public spellForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
