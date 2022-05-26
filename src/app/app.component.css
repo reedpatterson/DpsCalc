@@ -1,0 +1,13 @@
+.invalid {
+    background-color: #f8d7da;
+}
+
+.removeBtn {
+    float: right;
+    width: 32px;
+    text-align: center;
+}
+
+.removeBtn:hover {
+    background-color: #f8d7da;
+}

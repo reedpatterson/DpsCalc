@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ValidationMessageComponent } from './validation-msg';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValidationMessageComponent
   ],
   imports: [
     BrowserModule,
