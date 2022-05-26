@@ -18,24 +18,64 @@
             <validation-msg [control]="spellForm.controls['ct']"></validation-msg>
           </div>
           <div class="p-2 col-md-6">
-            <label class="col-12">Total Ticks: </label>
-            <input [ngClass]="{ 'invalid': spellForm.controls['ticks'].errors && spellForm.controls['ticks'].touched}"
-              class="col-md-3 col-10 form-control" type="number" step=".1" id="ticks" formControlName="ticks">
-            <validation-msg [control]="spellForm.controls['ticks']"></validation-msg>
+            <label class="col-12">Cooldown: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['cd'].errors && spellForm.controls['cd'].touched}"
+              class="col-md-3 col-10 form-control" type="number" step=".1" id="cd" formControlName="cd">
+            <validation-msg [control]="spellForm.controls['cd']"></validation-msg>
           </div>
         </div>
         <div class="d-flex">
-          <div class="p-2 col-md-6">
+          <div class="p-2 col-md-4 col-4">
             <label class="col-12">Damage (Low): </label>
             <input [ngClass]="{ 'invalid': spellForm.controls['dmg_low'].errors && spellForm.controls['dmg_low'].touched}"
             class="col-md-3 col-10 form-control" type="number" step="1" id="dmg-low" formControlName="dmg_low">
             <validation-msg [control]="spellForm.controls['dmg_low']"></validation-msg>
           </div>
-          <div class="p-2 col-md-6">
+          <div class="p-2 col-md-4 col-4">
             <label class="col-12">Damage (High): </label>
             <input [ngClass]="{ 'invalid': spellForm.controls['dmg_high'].errors && spellForm.controls['dmg_high'].touched}"
             class="col-md-3 col-10 form-control" type="number" step="1" id="dmg-high" formControlName="dmg_high">
             <validation-msg [control]="spellForm.controls['dmg_high']"></validation-msg>
+          </div>
+          <div class="p-2 col-md-4 col-4">
+            <label class="col-12">Number of Hits: </label>
+            <select [ngClass]="{ 'invalid': spellForm.controls['multiplier'].errors && spellForm.controls['multiplier'].touched}"
+            class="col-md-3 col-10 form-select" id="dmg-high" formControlName="multiplier">
+            <option *ngFor="let num of [1,2,3,4,5]" [value]="num">x{{num}}</option>
+          </select>
+            <validation-msg [control]="spellForm.controls['multiplier']"></validation-msg>
+          </div>
+        </div>
+        <div class="p-2 col-2">
+          <label class="col-12 text-center">DoT? </label>
+          <input class="col-12" type="checkbox" id="dot" formControlName="dot">
+          </div>
+        <div class="d-flex">
+          <div class="p-2 col-md-6" *ngIf="spellForm.controls['dot'].value === true">
+            <label class="col-12">DoT Duration: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['duration'].errors && spellForm.controls['duration'].touched}"
+            class="col-md-3 col-10 form-control" type="number" step=".1" id="duration" formControlName="duration">
+            <validation-msg [control]="spellForm.controls['duration']"></validation-msg>
+          </div>
+          <div class="p-2 col-md-6" *ngIf="spellForm.controls['dot'].value === true">
+            <label class="col-12">DoT Interval: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['interval'].errors && spellForm.controls['interval'].touched}"
+              class="col-md-3 col-10 form-control" type="number" step=".1" id="interval" formControlName="interval">
+            <validation-msg [control]="spellForm.controls['interval']"></validation-msg>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="p-2 col-md-6" *ngIf="spellForm.controls['dot'].value === true">
+            <label class="col-12">DoT Damage Low: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['dot_dmg_low'].errors && spellForm.controls['dot_dmg_low'].touched}"
+            class="col-md-3 col-10 form-control" type="number" step=".1" id="dot_dmg_low" formControlName="dot_dmg_low">
+            <validation-msg [control]="spellForm.controls['dot_dmg_low']"></validation-msg>
+          </div>
+          <div class="p-2 col-md-6" *ngIf="spellForm.controls['dot'].value === true">
+            <label class="col-12">DoT Damage High: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['dot_dmg_high'].errors && spellForm.controls['dot_dmg_high'].touched}"
+            class="col-md-3 col-10 form-control" type="number" step=".1" id="dot_dmg_high" formControlName="dot_dmg_high">
+            <validation-msg [control]="spellForm.controls['dot_dmg_high']"></validation-msg>
           </div>
         </div>
         <div class="p-2">
@@ -57,7 +97,7 @@
           </select>
           <validation-msg [control]="spellForm.controls['max_targets']"></validation-msg>
         </div>
-        
+
         <div class="py-3">
           <button type="button" class="btn btn-sm btn-secondary" (click)="addSpell()">Add Spell</button>
         </div>
@@ -67,20 +107,20 @@
       <div class="col-12 px-5">
         <h3>Fight Info</h3>
         <div class="p-2">
-          <label class="col-12">Duration: </label>
+          <label class="col-md-6">Duration: </label>
           <input [ngClass]="{ 'invalid': fightForm.controls['duration'].errors && fightForm.controls['duration'].touched}"
             class="col-md-3 col-10 form-control" type="number" step=".1" id="duration" formControlName="duration">
           <validation-msg [control]="fightForm.controls['duration']"></validation-msg>
         </div>
         <div class="p-2">
-          <label class="col-12">Total Mobs: </label>
+          <label class="col-md-6">Total Mobs: </label>
           <input
             [ngClass]="{ 'invalid': fightForm.controls['total_mobs'].errors && fightForm.controls['total_mobs'].touched}"
             class="col-md-3 col-10 form-control" type="number" step="1" id="total_mobs" formControlName="total_mobs">
           <validation-msg [control]="fightForm.controls['total_mobs']"></validation-msg>
           </div>
-        <div class="p-2" *ngIf="spellForm.controls['type'].value === 'enc'">
-          <label class="col-12">Linked Mobs: </label>
+        <div class="p-2">
+          <label class="col-md-6">Linked Mobs: </label>
           <input
             [ngClass]="{ 'invalid': fightForm.controls['linked_mobs'].errors && fightForm.controls['linked_mobs'].touched}"
             class="col-md-3 col-10 form-control" type="number" step="1" id="linked_mobs" formControlName="linked_mobs">
@@ -93,7 +133,7 @@
     </form>
   </div>
   <div class="col-md-7 col-12 p-5 row">
-    <div class="col-6">
+    <div class="col-5">
       <h2>Spell List</h2>
       <div *ngFor="let s of spellArray; index as i">
         <h3>
@@ -102,14 +142,14 @@
         </h3>
       </div>
     </div>
-    <div class="col-6 border">
+    <div class="col-7 border">
       <h2>Spell List Ranked</h2>
-    <div *ngFor="let s of spellArray">
+    <div *ngFor="let s of spellDPSArray">
       <h3>
-        <strong>{{s.name}}</strong>
+        <strong>{{s.name}} - {{s.dps | number : '1.2-2'}}dps</strong>
       </h3>
     </div>
-    </div>  
+    </div>
   </div>
 </div>
 
