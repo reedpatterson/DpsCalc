@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
   public spellForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     ct: new FormControl(0, [Validators.required, Validators.min(.1)]),
+    rs: new FormControl(0, [Validators.required, Validators.min(.1)]),
     cd: new FormControl(10, [Validators.required, Validators.min(.1)]),
     dot: new FormControl(false, [this.dotValidator()]),
     dot_dmg_low: new FormControl(0, [Validators.required, Validators.min(1)]),
@@ -56,6 +57,10 @@ export class AppComponent implements OnInit {
     total_mobs: new FormControl(1, [Validators.required, Validators.min(1)]),
     linked_mobs: new FormControl(1, [Validators.min(1),]),
   }, [this.linkedGreaterThanTotal()]);
+
+  public playerForm = new FormGroup({
+    rs: new FormControl(0),
+  });
 
   ngOnInit(): void {
 
@@ -105,7 +110,7 @@ export class AppComponent implements OnInit {
 
       let totalDmg = (initDmg + dotDmg) * targetsHit;
 
-      const dps = totalDmg / spell.ct
+      const dps = totalDmg / (spell.ct + spell.rs)
 
       //todo: change ticks to interval, add spell duration, and factor in fight duration
 
@@ -239,6 +244,7 @@ export class AppComponent implements OnInit {
 interface Spell {
   name: string;
   cd: number;
+  rs: number;
   ct: number;
   dot: boolean;
   dot_dmg_low?: number;

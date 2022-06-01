@@ -1,5 +1,17 @@
 <div class="d-md-flex">
   <div class="col-md-5 col-12">
+    <form [formGroup]="playerForm">
+
+      <div class="col-12 px-5 pt-5 pb-2">
+        <h3>Player Info</h3>
+        <div class="p-2">
+          <label class="col-12">Recovery Speed: </label>
+          <input [ngClass]="{ 'invalid': playerForm.controls['rs'].errors && playerForm.controls['rs'].touched}"
+            class="col-md-3 col-10 form-control" type="number" step=".1" id="name" formControlName="rs">
+          <validation-msg [control]="playerForm.controls['rs']"></validation-msg>
+        </div>
+      </div>
+    </form>
     <form [formGroup]="spellForm">
 
       <div class="col-12 px-5 pt-5 pb-2">
@@ -11,13 +23,19 @@
           <validation-msg [control]="spellForm.controls['name']"></validation-msg>
         </div>
         <div class="d-flex">
-          <div class="p-2 col-md-6">
+          <div class="p-2 col-md-4">
             <label class="col-12">Cast Time: </label>
             <input [ngClass]="{ 'invalid': spellForm.controls['ct'].errors && spellForm.controls['ct'].touched}"
               class="col-md-3 col-10 form-control" type="number" step=".1" id="ct" formControlName="ct">
             <validation-msg [control]="spellForm.controls['ct']"></validation-msg>
           </div>
-          <div class="p-2 col-md-6">
+          <div class="p-2 col-md-4">
+            <label class="col-12">Recovery Speed: </label>
+            <input [ngClass]="{ 'invalid': spellForm.controls['rs'].errors && spellForm.controls['crs'].touched}"
+              class="col-md-3 col-10 form-control" type="number" step=".1" id="rs" formControlName="rs">
+            <validation-msg [control]="spellForm.controls['rs']"></validation-msg>
+          </div>
+          <div class="p-2 col-md-4">
             <label class="col-12">Cooldown: </label>
             <input [ngClass]="{ 'invalid': spellForm.controls['cd'].errors && spellForm.controls['cd'].touched}"
               class="col-md-3 col-10 form-control" type="number" step=".1" id="cd" formControlName="cd">
@@ -155,6 +173,7 @@
         <div class="card" *ngIf="s.show_card">
           <div class="card-body">
             <div><b>Cast Time:</b> {{s.ct}}</div>
+            <div><b>Recovery Speed:</b> {{s.rs}}</div>
             <div><b>Cooldown:</b> {{s.cd}}</div>
             <div><b>Damage:</b> {{s.dmg_low}} - {{s.dmg_high}} x{{s.multiplier}}</div>
             <div *ngIf="s.dot"><b>DoT:</b> {{s?.dot_dmg_low}} - {{s?.dot_dmg_high}} every {{s.interval}}sec for {{s.duration}}sec</div>
