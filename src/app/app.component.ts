@@ -1,5 +1,7 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import * as Tesseract from 'tesseract.js';
 
 @Component({
   selector: 'app-root',
@@ -58,7 +60,9 @@ export class AppComponent implements OnInit {
   }, [this.linkedGreaterThanTotal()]);
 
   ngOnInit(): void {
-
+    window.addEventListener('paste', e => {
+      this.onPaste(e);
+    })
   }
 
   showCard(s: Spell | SpellDPS) {
@@ -233,6 +237,36 @@ export class AppComponent implements OnInit {
     } else {
       control.setErrors(error);
     }
+  }
+
+  onPaste(event: any) {
+
+    let temp;
+    temp = event.clipboardData
+    if(temp.files.length > 0) {
+      console.log(temp.files)
+      this.parseImage(temp.files[0])
+    }
+  }
+
+  onFileUpload(ev: Event) {
+    const input: HTMLInputElement = (document.getElementById('fileInput') as HTMLInputElement)!;
+    if((ev.target as HTMLInputElement).files?.[0]) {
+      const file: Tesseract.ImageLike = (ev.target as HTMLInputElement).files?.[0]!
+      console.log(file)
+      this.parseImage(file)
+      input.value = ''
+      }
+  }
+
+  parseImage(img: Tesseract.ImageLike) {
+    Tesseract.recognize(
+      img,
+      'eng',
+      { logger: (m: any) => {} }
+      ).then(({ data: { text } }) => {
+        console.log(text);
+      })
   }
 }
 

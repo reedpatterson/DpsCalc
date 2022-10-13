@@ -3,7 +3,8 @@
     <form [formGroup]="spellForm">
 
       <div class="col-12 px-5 pt-5 pb-2">
-        <h3>Spell Info</h3>
+        <h3>Spell Info <b (click)="fileInput.click()" style="cursor: pointer;" title="Upload spell screenshot">+</b></h3>
+        <input style="display: none;" id="fileInput" #fileInput type="file" (change)="onFileUpload($event)">
         <div class="p-2">
           <label class="col-12">Spell Name: </label>
           <input [ngClass]="{ 'invalid': spellForm.controls['name'].errors && spellForm.controls['name'].touched}"
