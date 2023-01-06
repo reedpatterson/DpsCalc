@@ -1,3 +1,3 @@
 # DPSCalcV2
 
-You'll figure it out
+Used to calculate an efficient spell rotation for combat in Everquest II
