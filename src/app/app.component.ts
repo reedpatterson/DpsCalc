@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
   spellArray: Spell[] = [];
   spellDPSArray: SpellDPS[] = [];
 
+  totalDps: number = 0;
+
   fightInfo?: FightInfo;
 
   /*
@@ -113,6 +115,8 @@ export class AppComponent implements OnInit {
 
       this.spellDPSArray.push(spellDPS);
 
+      this.totalDps += spellDPS.dps;
+
     });
     this.spellDPSArray.sort((a: SpellDPS, b: SpellDPS) => b.dps - a.dps);
 
@@ -153,6 +157,7 @@ export class AppComponent implements OnInit {
     const rmSpell = this.spellArray.splice(ind, 1)[0];
 
     const rmSpellDPSInd = this.spellDPSArray.findIndex(x => x.name = rmSpell.name);
+    this.totalDps -= this.spellDPSArray[rmSpellDPSInd].dps;
     this.spellDPSArray.splice(rmSpellDPSInd, 1);
   }
 

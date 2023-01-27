@@ -166,7 +166,7 @@
     </div>
     <div class="col-7 border">
       <h2>Spell List Ranked</h2>
-      <div *ngFor="let s of spellDPSArray">
+      <div class="cursor-pointer" *ngFor="let s of spellDPSArray">
         <h3 (click)="showCard(s)">
           <strong>{{s.name}} - {{s.dps | number : '1.2-2'}}dps</strong>
         </h3>
@@ -178,6 +178,7 @@
           </div>
         </div>
       </div>
+      <div *ngIf="totalDps"><b>Total DPS:</b> {{ totalDps }}dps</div>
       <div *ngIf="fightInfo" class="pt-3">
         <div><b>Fight Duration:</b> {{fightInfo.duration}} seconds</div>
         <div><b>Total Mobs:</b> {{fightInfo.total_mobs}}</div>
