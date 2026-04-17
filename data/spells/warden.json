@@ -1,0 +1,281 @@
+[
+  {
+    "uid": "784797358",
+    "name": "Winter's Sting",
+    "level": 59,
+    "castSecs": 2,
+    "recastSecs": 3,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 237,
+    "dmgHigh": 289,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 507,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1563563662",
+    "name": "Dawnstrike VII",
+    "level": 72,
+    "castSecs": 2,
+    "recastSecs": 3,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 340,
+    "dmgHigh": 416,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 276,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1869765490",
+    "name": "Winds of Permafrost IV",
+    "level": 74,
+    "castSecs": 3,
+    "recastSecs": 16,
+    "durationSecs": 30,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 629,
+    "dmgHigh": 769,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 256,
+      "backdrop": 312,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2223516351",
+    "name": "Nature's Pack II",
+    "level": 74,
+    "castSecs": 2,
+    "recastSecs": 60,
+    "durationSecs": 6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 226,
+      "backdrop": 315,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2731561272",
+    "name": "Undergrowth III",
+    "level": 75,
+    "castSecs": 2,
+    "recastSecs": 20,
+    "durationSecs": 18,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 308,
+      "backdrop": 312,
+      "heroic_op": 13
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Improves the agility reduction by 7%."
+    }
+  },
+  {
+    "uid": "551792487",
+    "name": "Root VI",
+    "level": 76,
+    "castSecs": 2,
+    "recastSecs": 10,
+    "durationSecs": 18,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 308,
+      "backdrop": 315,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 3%. | Improves casting speed by 0.2 seconds."
+    }
+  },
+  {
+    "uid": "2827886460",
+    "name": "Frostbite V",
+    "level": 77,
+    "castSecs": 1,
+    "recastSecs": 24,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "dmgLow": 146,
+    "dmgHigh": 178,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 229,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2447044247",
+    "name": "Icefall VII",
+    "level": 78,
+    "castSecs": 2,
+    "recastSecs": 8,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 594,
+    "dmgHigh": 726,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 256,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "993560591",
+    "name": "Willow Wisp VI",
+    "level": 79,
+    "castSecs": 0.5,
+    "recastSecs": 300,
+    "durationSecs": 9,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 157,
+      "backdrop": 313,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 20,
+      "maxtier": 5,
+      "description": "Decreases the base reuse of Willow Wisp by 24 seconds. | Improves reuse speed by 20 seconds. | The final tier increases the hate position reduction of Willow Wisp by 1."
+    }
+  },
+  {
+    "uid": "3432705505",
+    "name": "Charm Creature",
+    "level": 70,
+    "castSecs": 6,
+    "recastSecs": 0,
+    "durationSecs": 264,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 668,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1726911952",
+    "name": "Calm",
+    "level": 70,
+    "castSecs": 1.5,
+    "recastSecs": 45,
+    "durationSecs": 10.6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 679,
+      "backdrop": 312,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1323009400",
+    "name": "Serene Symbol",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 13,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  }
+]

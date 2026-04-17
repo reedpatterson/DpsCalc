@@ -1,0 +1,92 @@
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+
+.sidebar-sticky {
+  position: sticky;
+  top: 12px;
+}
+
+/* ── Spell table inputs ───────────────────────────────────────────────────── */
+
+.num-sm { width: 80px; min-width: 60px; }
+.num-xs { width: 60px; min-width: 48px; }
+
+.spell-table td, .spell-table th {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.spell-table input[type="number"] {
+  padding: 2px 4px;
+  font-size: .8rem;
+}
+
+.expand-btn {
+  color: var(--bs-secondary);
+  text-decoration: none;
+  font-size: .9rem;
+}
+.expand-btn:hover { color: var(--bs-light); }
+
+/* ── Dimmed disabled rows ─────────────────────────────────────────────────── */
+
+tr.table-secondary td { opacity: 0.45; }
+tr.table-secondary td:first-child { opacity: 1; }
+
+/* ── Type badges ──────────────────────────────────────────────────────────── */
+
+.badge { font-size: .7rem; }
+
+/* ── Dark theme tweaks ────────────────────────────────────────────────────── */
+
+.expand-row td {
+  border-top: none;
+}
+
+.spell-name {
+  font-size: .85rem;
+}
+
+.spell-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 2px;
+  display: none; /* hidden until src resolves — onerror keeps it hidden on failure */
+}
+.spell-icon[src]:not([src="#"]) {
+  display: inline-block;
+}
+
+/* ── Results DPS bar ──────────────────────────────────────────────────────── */
+
+.results-table tbody tr.dps-bar-row {
+  background: linear-gradient(
+    to right,
+    rgba(25, 135, 84, 0.30) var(--bar-pct),
+    transparent var(--bar-pct)
+  );
+}
+
+/* Bootstrap paints each <td> with its own background-color, which sits above
+   the <tr> background and hides the gradient. Clear it on all cells. */
+.results-table tbody tr.dps-bar-row td {
+  --bs-table-bg:        transparent;
+  --bs-table-accent-bg: transparent;
+  background-color:     transparent;
+}
+
+.results-table tbody tr.dps-bar-row:hover {
+  background: linear-gradient(
+    to right,
+    rgba(25, 135, 84, 0.50) var(--bar-pct),
+    rgba(255,255,255,0.03) var(--bar-pct)
+  );
+}
+
+/* ── Scrollable main table area on small screens ──────────────────────────── */
+
+@media (max-width: 991px) {
+  .sidebar-sticky {
+    position: static;
+  }
+}

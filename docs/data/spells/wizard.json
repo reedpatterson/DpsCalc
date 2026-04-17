@@ -1,0 +1,565 @@
+[
+  {
+    "uid": "4259114101",
+    "name": "Numbing Cold",
+    "level": 52,
+    "castSecs": 1,
+    "recastSecs": 45,
+    "durationSecs": 36,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": 8,
+    "aoeRadius": 5,
+    "icon": {
+      "id": 256,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3611347082",
+    "name": "Solar Flare VIII",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 3,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 363,
+    "dmgHigh": 674,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 161,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.1,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces power cost by 3%. | Improves casting speed by 0.1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "3707481939",
+    "name": "Flames of Velious III",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 30,
+    "durationSecs": 4,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 228,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3803492714",
+    "name": "Magma Chamber VI",
+    "level": 72,
+    "castSecs": 2,
+    "recastSecs": 30,
+    "durationSecs": 3,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 756,
+    "dmgHigh": 1260,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 160,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Reduces power cost by 3%. | Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 2%."
+    }
+  },
+  {
+    "uid": "2078803033",
+    "name": "Incinerate VII",
+    "level": 72,
+    "castSecs": 1,
+    "recastSecs": 8,
+    "durationSecs": 14,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 2,
+    "dmgLow": 49,
+    "dmgHigh": 81,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 168,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2711400906",
+    "name": "Shackle VI",
+    "level": 73,
+    "castSecs": 2,
+    "recastSecs": 6,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 166,
+      "backdrop": 315,
+      "heroic_op": 24
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "4027327529",
+    "name": "Protoflame III",
+    "level": 74,
+    "castSecs": 2,
+    "recastSecs": 25,
+    "durationSecs": 6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 190,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2416155139",
+    "name": "Glacial Wind V",
+    "level": 75,
+    "castSecs": 4,
+    "recastSecs": 16,
+    "durationSecs": 9,
+    "targetType": "encounter",
+    "isDot": true,
+    "dotInterval": 3,
+    "dmgLow": 225,
+    "dmgHigh": 417,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 256,
+      "backdrop": 312,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 3%. | Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "935038990",
+    "name": "Storm of Lightning VI",
+    "level": 76,
+    "castSecs": 3,
+    "recastSecs": 9,
+    "durationSecs": 6,
+    "targetType": "encounter",
+    "isDot": true,
+    "dotInterval": 2,
+    "dmgLow": 94,
+    "dmgHigh": 175,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 169,
+      "backdrop": 312,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3225881896",
+    "name": "Storming Tempest II",
+    "level": 76,
+    "castSecs": 3,
+    "recastSecs": 30,
+    "durationSecs": 48,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 8,
+    "dmgLow": 4,
+    "dmgHigh": 5,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 14,
+      "backdrop": 315,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3179239586",
+    "name": "Immolation VI",
+    "level": 77,
+    "castSecs": 2,
+    "recastSecs": 6,
+    "durationSecs": 8,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 2,
+    "dmgLow": 233,
+    "dmgHigh": 433,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 482,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.1,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces power cost by 3%. | Improves casting speed by 0.1 seconds. | Improves the Crit Bonus by 2%."
+    }
+  },
+  {
+    "uid": "2051373366",
+    "name": "Ball of Fire V",
+    "level": 77,
+    "castSecs": 3,
+    "recastSecs": 9,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 923,
+    "dmgHigh": 1715,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 242,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.1,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces power cost by 3%. | Improves casting speed by 0.1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "1825475347",
+    "name": "Cease VI",
+    "level": 77,
+    "castSecs": 0.5,
+    "recastSecs": 25,
+    "durationSecs": 2,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 476,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 5%."
+    }
+  },
+  {
+    "uid": "3482807092",
+    "name": "Aurora V",
+    "level": 78,
+    "castSecs": 1.5,
+    "recastSecs": 9,
+    "durationSecs": 7.5,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 198,
+      "backdrop": 315,
+      "heroic_op": 24
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3493485022",
+    "name": "Ring of Ice IV",
+    "level": 78,
+    "castSecs": 2,
+    "recastSecs": 20,
+    "durationSecs": 7.5,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 228,
+      "backdrop": 312,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2685904418",
+    "name": "Fusion II",
+    "level": 78,
+    "castSecs": 5,
+    "recastSecs": 180,
+    "durationSecs": 2,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 31,
+    "dmgHigh": 51,
+    "maxTargetsApi": 3,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 85,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2812714894",
+    "name": "Ice Spears VII",
+    "level": 79,
+    "castSecs": 1,
+    "recastSecs": 10,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "dmgLow": 44,
+    "dmgHigh": 81,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 505,
+      "backdrop": 315,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3684629894",
+    "name": "Firestorm VI",
+    "level": 80,
+    "castSecs": 2,
+    "recastSecs": 10,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 492,
+    "dmgHigh": 914,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 481,
+      "backdrop": 313,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3296813264",
+    "name": "Ice Comet III",
+    "level": 80,
+    "castSecs": 4,
+    "recastSecs": 45,
+    "durationSecs": 0.5,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 2889,
+    "dmgHigh": 5366,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 252,
+      "backdrop": 315,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 3%. | Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "4253427197",
+    "name": "Rays of Disintegration",
+    "level": 80,
+    "castSecs": 3,
+    "recastSecs": 120,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 2149,
+    "dmgHigh": 3224,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 172,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3512235232",
+    "name": "Manaburn",
+    "level": 70,
+    "castSecs": 6,
+    "recastSecs": 300,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 1477,
+    "dmgHigh": 1633,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 3,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1156541882",
+    "name": "Static Discharge",
+    "level": 70,
+    "castSecs": 1.5,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 211,
+    "dmgHigh": 352,
+    "maxTargetsApi": 4,
+    "aoeRadius": 15,
+    "icon": {
+      "id": 560,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2668060069",
+    "name": "Confounding",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 60,
+    "dmgHigh": 100,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 559,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3570612330",
+    "name": "Concussive Blast",
+    "level": 70,
+    "castSecs": 0,
+    "recastSecs": 150,
+    "durationSecs": 1.5,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 520,
+    "dmgHigh": 966,
+    "maxTargetsApi": 12,
+    "aoeRadius": 15,
+    "icon": {
+      "id": 561,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  }
+]

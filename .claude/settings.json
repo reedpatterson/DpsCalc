@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:census.daybreakgames.com)",
+      "Bash(node -e ' *)",
+      "Bash(node scripts/fetch-spells.js wizard)",
+      "Bash(node --input-type=module)",
+      "Bash(node scripts/fetch-spells.js)",
+      "Bash(cp -r js/* docs/js/)",
+      "Bash(cp -r css/* docs/css/)",
+      "Bash(cp data/spells/*.json docs/data/spells/)"
+    ],
+    "additionalDirectories": [
+      "d:\\projects\\DpsCalc"
+    ]
+  }
+}

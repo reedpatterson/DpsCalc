@@ -1,0 +1,323 @@
+[
+  {
+    "uid": "867072270",
+    "name": "Feast IV",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 10,
+    "durationSecs": 216,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 3,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 471,
+      "backdrop": 315,
+      "heroic_op": 15
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Improves reuse speed by 1 seconds. | Improves casting speed by 0.2 seconds. | Improves the resistibility by 4%."
+    }
+  },
+  {
+    "uid": "729579204",
+    "name": "Death Swarm VII",
+    "level": 72,
+    "castSecs": 1,
+    "recastSecs": 4,
+    "durationSecs": 12,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 3,
+    "dmgLow": 113,
+    "dmgHigh": 139,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 369,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.1,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces duration by 1 seconds. | Improves casting speed by 0.1 seconds. | Improves the Crit Bonus by 2%."
+    }
+  },
+  {
+    "uid": "1714941490",
+    "name": "Starnova IV",
+    "level": 74,
+    "castSecs": 4,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 944,
+    "dmgHigh": 1154,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 510,
+      "backdrop": 312,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "2280662669",
+    "name": "Maddening Swarm III",
+    "level": 75,
+    "castSecs": 1,
+    "recastSecs": 30,
+    "durationSecs": 36,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 369,
+      "backdrop": 312,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "18876671",
+    "name": "Intimidation VI",
+    "level": 76,
+    "castSecs": 2,
+    "recastSecs": 10,
+    "durationSecs": 36,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 241,
+      "backdrop": 315,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2977396176",
+    "name": "Karana's Hold VI",
+    "level": 76,
+    "castSecs": 2,
+    "recastSecs": 10,
+    "durationSecs": 12.6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 308,
+      "backdrop": 315,
+      "heroic_op": 16
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3084889045",
+    "name": "Thunderbolt V",
+    "level": 77,
+    "castSecs": 3,
+    "recastSecs": 15,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 833,
+    "dmgHigh": 1388,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 233,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Improves reuse speed by 1 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "3586975910",
+    "name": "Tempest VII",
+    "level": 78,
+    "castSecs": 2,
+    "recastSecs": 8,
+    "durationSecs": 8,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 2,
+    "dmgLow": 127,
+    "dmgHigh": 156,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 511,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces duration by 0.8 seconds. | Improves casting speed by 0.2 seconds. | Improves the Crit Bonus by 2%."
+    }
+  },
+  {
+    "uid": "3659941931",
+    "name": "Call of Storms II",
+    "level": 78,
+    "castSecs": 2,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 933,
+    "dmgHigh": 1141,
+    "maxTargetsApi": 8,
+    "aoeRadius": 15,
+    "icon": {
+      "id": 1,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces casting time by 0.2 seconds. | Increases the Crit Bonus by 2%. | Reduces resistibility by 3%."
+    }
+  },
+  {
+    "uid": "654642158",
+    "name": "Brambles VI",
+    "level": 79,
+    "castSecs": 0.5,
+    "recastSecs": 300,
+    "durationSecs": 6,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 157,
+      "backdrop": 313,
+      "heroic_op": 14
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 30,
+      "maxtier": 5,
+      "description": "Improves reuse speed by 30 seconds. | Decreases the base reuse of Brambles by 24 seconds. | The final tier increases the hate position reduction of Brambles by 1."
+    }
+  },
+  {
+    "uid": "3432705505",
+    "name": "Charm Creature",
+    "level": 70,
+    "castSecs": 6,
+    "recastSecs": 0,
+    "durationSecs": 264,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 668,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1726911952",
+    "name": "Calm",
+    "level": 70,
+    "castSecs": 1.5,
+    "recastSecs": 45,
+    "durationSecs": 10.6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 679,
+      "backdrop": 312,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1323009400",
+    "name": "Serene Symbol",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 13,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "uid": "1262339234",
+    "name": "Crystal Blast VIII",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 3,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 280,
+    "dmgHigh": 379,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 161,
+      "backdrop": 315,
+      "heroic_op": 25
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "2052228351",
+    "name": "Vampire Bats IV",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 12,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "dmgLow": 72,
+    "dmgHigh": 109,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 768,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "177594778",
+    "name": "Earthquake V",
+    "level": 71,
+    "castSecs": 2,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 288,
+    "dmgHigh": 864,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 288,
+      "backdrop": 313,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "3972827027",
+    "name": "Fiery Annihilation VII",
+    "level": 72,
+    "castSecs": 1,
+    "recastSecs": 8,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 273,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3311242824",
+    "name": "Petrify V",
+    "level": 72,
+    "castSecs": 3,
+    "recastSecs": 45,
+    "durationSecs": 5,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 378,
+    "dmgHigh": 462,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 329,
+      "backdrop": 315,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.3,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.3 seconds. | Improves the Crit Bonus by 3%."
+    }
+  },
+  {
+    "uid": "395418041",
+    "name": "Quicksand VI",
+    "level": 73,
+    "castSecs": 2,
+    "recastSecs": 6,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 166,
+      "backdrop": 315,
+      "heroic_op": 24
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "351915995",
+    "name": "Winds of Velious II",
+    "level": 74,
+    "castSecs": 1,
+    "recastSecs": 12,
+    "durationSecs": 48,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "dmgLow": 90,
+    "dmgHigh": 111,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 511,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3037638050",
+    "name": "Roaring Flames IV",
+    "level": 75,
+    "castSecs": 3,
+    "recastSecs": 60,
+    "durationSecs": 6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 276,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2800229422",
+    "name": "Ice Storm VII",
+    "level": 76,
+    "castSecs": 3,
+    "recastSecs": 9,
+    "durationSecs": 6,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 307,
+    "dmgHigh": 375,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 169,
+      "backdrop": 312,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.3,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.3 seconds. | Improves the Crit Bonus of Ice Storm by 1%."
+    }
+  },
+  {
+    "uid": "1807239286",
+    "name": "Aqueous Swarm V",
+    "level": 77,
+    "castSecs": 2,
+    "recastSecs": 60,
+    "durationSecs": 6,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 514,
+      "backdrop": 315,
+      "heroic_op": 28
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "933370308",
+    "name": "Shattered Earth V",
+    "level": 78,
+    "castSecs": 3,
+    "recastSecs": 40,
+    "durationSecs": 5,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 161,
+    "dmgHigh": 197,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 508,
+      "backdrop": 312,
+      "heroic_op": 29
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.3,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.3 seconds. | Improves the Crit Bonus by 1%."
+    }
+  },
+  {
+    "uid": "2963145186",
+    "name": "Communion",
+    "level": 80,
+    "castSecs": 4,
+    "recastSecs": 120,
+    "durationSecs": 8,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 471,
+      "backdrop": 317,
+      "heroic_op": -1
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1255602005",
+    "name": "Theurgist's Detonation",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 1007,
+    "dmgHigh": 1679,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 620,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "4026652778",
+    "name": "Shadowstep",
+    "level": 70,
+    "castSecs": 0,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 556,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3323421179",
+    "name": "Animist's Evasion",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 180,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 650,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1499717324",
+    "name": "Animated Dagger",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 3,
+    "dmgHigh": 4,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 658,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  }
+]

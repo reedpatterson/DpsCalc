@@ -1,0 +1,533 @@
+[
+  {
+    "uid": "2236238021",
+    "name": "Lightning Strike VII",
+    "level": 71,
+    "castSecs": 0.5,
+    "recastSecs": 10,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 203,
+    "dmgHigh": 339,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 233,
+      "backdrop": 315,
+      "heroic_op": 36
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2940843247",
+    "name": "Rear Shot VI",
+    "level": 71,
+    "castSecs": 1.5,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 575,
+    "dmgHigh": 959,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 306,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1438996181",
+    "name": "Searing Shot VI",
+    "level": 71,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 160,
+    "dmgHigh": 267,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 222,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1585076992",
+    "name": "Arrow Rip IV",
+    "level": 72,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 277,
+    "dmgHigh": 461,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 335,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "854547342",
+    "name": "Snaring Shot III",
+    "level": 72,
+    "castSecs": 0.5,
+    "recastSecs": 10,
+    "durationSecs": 12,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 182,
+    "dmgHigh": 304,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 364,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 1,
+      "maxtier": 5,
+      "description": "Improves the Crit Bonus by 1.5%. | Improves reuse speed by 1 seconds."
+    }
+  },
+  {
+    "uid": "3422435059",
+    "name": "Evade VI",
+    "level": 73,
+    "castSecs": 0.25,
+    "recastSecs": 20,
+    "durationSecs": 3,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 278,
+      "backdrop": 315,
+      "heroic_op": 41
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1254099974",
+    "name": "Natural Selection V",
+    "level": 73,
+    "castSecs": 1,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 514,
+    "dmgHigh": 857,
+    "maxTargetsApi": 8,
+    "aoeRadius": 5,
+    "icon": {
+      "id": 334,
+      "backdrop": 313,
+      "heroic_op": 40
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Increases damage by 1%."
+    }
+  },
+  {
+    "uid": "3829962190",
+    "name": "Miracle Shot IV",
+    "level": 73,
+    "castSecs": 1.5,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 466,
+    "dmgHigh": 776,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 342,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1688422436",
+    "name": "Sneak Attack VI",
+    "level": 74,
+    "castSecs": 0.5,
+    "recastSecs": 10,
+    "durationSecs": 0.1,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 288,
+    "dmgHigh": 480,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 377,
+      "backdrop": 315,
+      "heroic_op": 40
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1545176675",
+    "name": "Crippling Arrow V",
+    "level": 74,
+    "castSecs": 1.5,
+    "recastSecs": 60,
+    "durationSecs": 72,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 476,
+    "dmgHigh": 794,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 360,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2935310692",
+    "name": "Stream of Arrows II",
+    "level": 74,
+    "castSecs": 3,
+    "recastSecs": 120,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 1180,
+    "dmgHigh": 1442,
+    "maxTargetsApi": 6,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 299,
+      "backdrop": 313,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.2,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.2 seconds. | Reduces recast by 5 seconds. | Improves Crit Bonus by 1."
+    }
+  },
+  {
+    "uid": "3441507410",
+    "name": "Emberstrike VII",
+    "level": 75,
+    "castSecs": 0.5,
+    "recastSecs": 10,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 387,
+    "dmgHigh": 646,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 482,
+      "backdrop": 315,
+      "heroic_op": 40
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2503161814",
+    "name": "Snipe VI",
+    "level": 75,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 36,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 310,
+      "backdrop": 315,
+      "heroic_op": 41
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "387659273",
+    "name": "Ensnare VI",
+    "level": 76,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 308,
+      "backdrop": 315,
+      "heroic_op": 41
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2400866944",
+    "name": "Sniper Shot II",
+    "level": 76,
+    "castSecs": 3,
+    "recastSecs": 300,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 3645,
+    "dmgHigh": 6075,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 496,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1127974273",
+    "name": "Ranger's Blade VI",
+    "level": 77,
+    "castSecs": 0.5,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 867,
+    "dmgHigh": 1446,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 339,
+      "backdrop": 315,
+      "heroic_op": 36
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1697655141",
+    "name": "Trick Shot V",
+    "level": 77,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 402,
+    "dmgHigh": 671,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 29,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1028466154",
+    "name": "Bloody Reminder VI",
+    "level": 78,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 2.6,
+    "dmgLow": 53,
+    "dmgHigh": 88,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 345,
+      "backdrop": 315,
+      "heroic_op": 36
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "82771983",
+    "name": "Hidden Shot V",
+    "level": 78,
+    "castSecs": 1.5,
+    "recastSecs": 90,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 1131,
+    "dmgHigh": 1885,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 382,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2874083453",
+    "name": "Immobilizing Lunge VI",
+    "level": 79,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 4,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 263,
+    "dmgHigh": 439,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 376,
+      "backdrop": 315,
+      "heroic_op": 36
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3731354225",
+    "name": "Stalk VI",
+    "level": 80,
+    "castSecs": 1,
+    "recastSecs": 30,
+    "durationSecs": 180,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 370,
+      "backdrop": 315,
+      "heroic_op": 38
+    },
+    "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2451617984",
+    "name": "Triple Shot V",
+    "level": 80,
+    "castSecs": 1.5,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 148,
+    "dmgHigh": 164,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 361,
+      "backdrop": 315,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.1,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.1 seconds. | Increases damage by 1%."
+    }
+  },
+  {
+    "uid": "1958907595",
+    "name": "Storm of Arrows III",
+    "level": 80,
+    "castSecs": 2,
+    "recastSecs": 180,
+    "durationSecs": 0,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "dmgLow": 1099,
+    "dmgHigh": 1831,
+    "maxTargetsApi": null,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 363,
+      "backdrop": 312,
+      "heroic_op": 37
+    },
+    "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0.15,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves casting speed by 0.15 seconds. | Increases damage by 1%."
+    }
+  }
+]
