@@ -2,11 +2,10 @@
 
 // ── State ──────────────────────────────────────────────────────────────────
 
-let spells = [];    // array of spell objects (from api.js / parse.js)
+let spells = [];
 let currentClass = null;
 
 // ── localStorage helpers ───────────────────────────────────────────────────
-// Stats and fight info are global. Per-spell inputs are keyed by class.
 
 const LS_STATS  = key => `dpscalc_stats_${key}`;
 const LS_FIGHT  = 'dpscalc_fight';
@@ -19,7 +18,6 @@ function lsSet(key, val) {
   try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
 }
 
-// Persist the three stat inputs for the current class.
 function saveStats() {
   if (!currentClass) return;
   lsSet(LS_STATS(currentClass), {
@@ -29,7 +27,6 @@ function saveStats() {
   });
 }
 
-// Restore stat inputs for a given class key.
 function loadStats(classKey) {
   const saved = lsGet(LS_STATS(classKey));
   if (!saved) return;
@@ -38,7 +35,6 @@ function loadStats(classKey) {
   if (saved.recoverySpeed != null) document.getElementById('recoverySpeed').value = saved.recoverySpeed;
 }
 
-// Persist the three fight inputs.
 function saveFight() {
   lsSet(LS_FIGHT, {
     fightDuration: document.getElementById('fightDuration').value,
@@ -47,7 +43,6 @@ function saveFight() {
   });
 }
 
-// Restore fight inputs from storage.
 function loadFight() {
   const saved = lsGet(LS_FIGHT);
   if (!saved) return;
@@ -56,8 +51,6 @@ function loadFight() {
   if (saved.linkedMobs    != null) document.getElementById('linkedMobs').value    = saved.linkedMobs;
 }
 
-// Persist user-mutable spell state for the current class.
-// Keyed by spell uid so it survives re-fetches.
 function saveSpells() {
   if (!currentClass) return;
   const state = {};
@@ -77,7 +70,6 @@ function saveSpells() {
   lsSet(LS_SPELLS(currentClass), state);
 }
 
-// Overlay saved spell state onto a freshly loaded spell array in-place.
 function restoreSpells(classKey) {
   const saved = lsGet(LS_SPELLS(classKey));
   if (!saved) return;
@@ -96,17 +88,19 @@ function restoreSpells(classKey) {
   }
 }
 
+// ── Class theme ────────────────────────────────────────────────────────────
+
+function applyClassTheme(classKey) {
+  const hue = CLASSES[classKey]?.hue ?? 210;
+  document.documentElement.style.setProperty('--hue', hue);
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   populateClassSelect();
   loadFight();
   bindEvents();
-
-  // Bootstrap tooltips
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el =>
-    new bootstrap.Tooltip(el, { trigger: 'hover' })
-  );
 });
 
 function populateClassSelect() {
@@ -126,6 +120,7 @@ function populateClassSelect() {
 function bindEvents() {
   document.getElementById('classSelect').addEventListener('change', e => {
     document.getElementById('loadBtn').disabled = !e.target.value;
+    if (e.target.value) applyClassTheme(e.target.value);
   });
 
   document.getElementById('loadBtn').addEventListener('click', onLoadSpells);
@@ -138,17 +133,14 @@ function bindEvents() {
     filterSpellRows(e.target.value.trim().toLowerCase());
   });
 
-  // Save stats on change (per class).
   ['castSpeed', 'reuseSpeed', 'recoverySpeed'].forEach(id =>
     document.getElementById(id).addEventListener('input', saveStats)
   );
 
-  // Save fight info on change (global).
   ['fightDuration', 'totalMobs', 'linkedMobs'].forEach(id =>
     document.getElementById(id).addEventListener('input', saveFight)
   );
 
-  // Delegate input changes on the spell table.
   document.getElementById('spellTableBody').addEventListener('change', onSpellFieldChange);
   document.getElementById('spellTableBody').addEventListener('input', onSpellFieldChange);
 }
@@ -160,6 +152,7 @@ async function onLoadSpells() {
   if (!classKey) return;
 
   currentClass = classKey;
+  applyClassTheme(classKey);
   showState('loading');
   document.getElementById('calcBtn').disabled = true;
   document.getElementById('resultsSection').classList.add('d-none');
@@ -170,23 +163,23 @@ async function onLoadSpells() {
     });
 
     if (!spells.length) {
-      showStatus(`No combat spells found for ${CLASSES[classKey].label}.`, 'text-warning');
+      showStatus(`No combat spells found for ${CLASSES[classKey].label}.`, 'warn');
       showState('empty');
       return;
     }
 
-    restoreSpells(classKey);   // overlay saved spell state before render
+    restoreSpells(classKey);
     renderSpellTable();
-    loadStats(classKey);       // restore per-class stats after render
+    loadStats(classKey);
     showState('spells');
-    showStatus(`Loaded ${spells.length} spells for ${CLASSES[classKey].label}.`, 'text-success');
+    showStatus(`Loaded ${spells.length} spells for ${CLASSES[classKey].label}.`, 'ok');
     document.getElementById('spellSectionTitle').textContent =
       `${CLASSES[classKey].label} Spells (${spells.length})`;
     document.getElementById('calcBtn').disabled = false;
 
   } catch (err) {
     console.error(err);
-    showStatus(`Error: ${err.message}`, 'text-danger');
+    showStatus(`Error: ${err.message}`, 'err');
     showState('empty');
   }
 }
@@ -197,18 +190,18 @@ function showState(state) {
   document.getElementById('spellSection').classList.toggle('d-none', state !== 'spells');
 }
 
-function showStatus(msg, cls) {
+function showStatus(msg, level) {
   const el = document.getElementById('loadStatus');
-  el.className = `form-text mt-2 ${cls}`;
+  el.className = `load-status ${level}`;
   el.textContent = msg;
 }
 
 // ── Render spell table ─────────────────────────────────────────────────────
 
 const TYPE_BADGES = {
-  st:        '<span class="badge bg-secondary">ST</span>',
-  encounter: '<span class="badge bg-primary">ENC</span>',
-  aoe:       '<span class="badge bg-danger">AoE</span>',
+  st:        '<span class="tbadge tbadge-st">ST</span>',
+  encounter: '<span class="tbadge tbadge-enc">ENC</span>',
+  aoe:       '<span class="tbadge tbadge-aoe">AoE</span>',
 };
 
 function renderSpellTable() {
@@ -216,99 +209,87 @@ function renderSpellTable() {
   tbody.innerHTML = '';
 
   spells.forEach((spell, idx) => {
-    // Main row
     const tr = document.createElement('tr');
-    tr.dataset.idx = idx;
+    tr.dataset.idx  = idx;
     tr.dataset.name = spell.name.toLowerCase();
+    if (!spell.enabled) tr.classList.add('row-disabled');
 
     const aaCell = spell.enhanceAA
-      ? `<input type="number" class="form-control form-control-sm num-xs" data-idx="${idx}" data-field="aaPoints"
+      ? `<input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="aaPoints"
                value="${spell.aaPoints}" min="0" max="${spell.enhanceAA.maxtier}"
                title="${escHtml(spell.enhanceAA.description)}">`
-      : '<span class="text-muted">—</span>';
-
-    const castDisplay  = spell.castSecs.toFixed(2);
-    const recastDisplay = spell.recastSecs.toFixed(1);
+      : '<span class="td-muted">—</span>';
 
     tr.innerHTML = `
-      <td><input type="checkbox" class="form-check-input" data-idx="${idx}" data-field="enabled"
+      <td><input type="checkbox" class="spell-check" data-idx="${idx}" data-field="enabled"
                  ${spell.enabled ? 'checked' : ''}></td>
       <td>
         ${spellIconHtml(spell)}
-      <span class="spell-name${spell.isAA ? ' text-info' : ''}">${escHtml(spell.name)}</span>
-        ${spell.isAA ? '<span class="badge bg-info text-dark ms-1" style="font-size:.65em">AA</span>' : ''}
+        <span class="spell-name${spell.isAA ? ' is-aa' : ''}">${escHtml(spell.name)}</span>
+        ${spell.isAA ? '<span class="aa-badge">AA</span>' : ''}
       </td>
-      <td class="text-muted">${spell.level}</td>
+      <td class="td-muted">${spell.level}</td>
       <td>${TYPE_BADGES[spell.targetType] || ''}</td>
-      <td class="text-muted">${castDisplay}s</td>
-      <td class="text-muted">${recastDisplay}s</td>
-      <td><input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="userDmgLow"
+      <td class="td-muted">${spell.castSecs.toFixed(2)}s</td>
+      <td class="td-muted">${spell.recastSecs.toFixed(1)}s</td>
+      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgLow"
                  value="${spell.userDmgLow}" min="0" placeholder="low"></td>
-      <td><input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="userDmgHigh"
+      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgHigh"
                  value="${spell.userDmgHigh}" min="0" placeholder="high"></td>
-      <td><input type="number" class="form-control form-control-sm num-xs" data-idx="${idx}" data-field="maxTargets"
+      <td><input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="maxTargets"
                  value="${spell.maxTargets}" min="1" max="24"
                  title="${spell.aoeRadius ? `AoE radius: ${spell.aoeRadius}m` : ''}"></td>
       <td>${aaCell}</td>
-      <td>
-        <button class="btn btn-link btn-sm p-0 expand-btn" data-idx="${idx}" title="More options">▾</button>
-      </td>
+      <td><button class="expand-btn" data-idx="${idx}" title="More options">▾</button></td>
     `;
     tbody.appendChild(tr);
 
-    // Expand row (DoT details + overrides) — hidden by default.
+    // Expand row
     const trExp = document.createElement('tr');
     trExp.className = 'expand-row d-none';
     trExp.dataset.expIdx = idx;
 
     const dotSection = spell.isDot ? `
-      <div class="row g-2 mb-2">
-        <div class="col-auto">
-          <label class="form-label form-label-sm mb-0">DoT Interval</label>
-          <div class="form-control-plaintext form-control-sm py-0">${spell.dotInterval}s</div>
-        </div>
-        <div class="col-auto">
-          <label class="form-label form-label-sm mb-0">DoT Duration</label>
-          <div class="form-control-plaintext form-control-sm py-0">${spell.durationSecs}s</div>
-        </div>
-        <div class="col-auto">
-          <label class="form-label form-label-sm mb-0">DoT Dmg/tick Low</label>
-          <input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="userDotDmgLow"
-                 value="${spell.userDotDmgLow}" min="0">
-        </div>
-        <div class="col-auto">
-          <label class="form-label form-label-sm mb-0">DoT Dmg/tick High</label>
-          <input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="userDotDmgHigh"
-                 value="${spell.userDotDmgHigh}" min="0">
-        </div>
+      <div class="expand-field">
+        <span class="expand-label">DoT Interval</span>
+        <span class="expand-value">${spell.dotInterval}s</span>
+      </div>
+      <div class="expand-field">
+        <span class="expand-label">DoT Duration</span>
+        <span class="expand-value">${spell.durationSecs}s</span>
+      </div>
+      <div class="expand-field">
+        <span class="expand-label">DoT Dmg/tick Low</span>
+        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgLow"
+               value="${spell.userDotDmgLow}" min="0">
+      </div>
+      <div class="expand-field">
+        <span class="expand-label">DoT Dmg/tick High</span>
+        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgHigh"
+               value="${spell.userDotDmgHigh}" min="0">
       </div>` : '';
 
     const enhNote = spell.enhanceAA
-      ? `<div class="text-info mb-2" style="font-size:.8em">
-           <strong>AA:</strong> ${escHtml(spell.enhanceAA.description)}
-           (max ${spell.enhanceAA.maxtier} pts)
-         </div>`
+      ? `<div class="aa-note"><strong>AA:</strong> ${escHtml(spell.enhanceAA.description)} (max ${spell.enhanceAA.maxtier} pts)</div>`
       : '';
 
     trExp.innerHTML = `
-      <td colspan="11" class="bg-dark bg-opacity-10 px-4 py-2">
+      <td colspan="11">
         ${enhNote}
-        ${dotSection}
-        <div class="row g-2">
-          <div class="col-auto">
-            <label class="form-label form-label-sm mb-0">Cast Override (s)</label>
-            <input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="castOverride"
+        <div class="expand-inner">
+          ${dotSection}
+          <div class="expand-field">
+            <span class="expand-label">Cast Override (s)</span>
+            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="castOverride"
                    value="${spell.castOverride ?? ''}" min="0" step="0.01" placeholder="—">
           </div>
-          <div class="col-auto">
-            <label class="form-label form-label-sm mb-0">Recast Override (s)</label>
-            <input type="number" class="form-control form-control-sm num-sm" data-idx="${idx}" data-field="recastOverride"
+          <div class="expand-field">
+            <span class="expand-label">Recast Override (s)</span>
+            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="recastOverride"
                    value="${spell.recastOverride ?? ''}" min="0" step="0.1" placeholder="—">
           </div>
-          <div class="col-auto align-self-end">
-            <button class="btn btn-outline-secondary btn-sm" data-idx="${idx}" data-action="clearOverrides">
-              Clear overrides
-            </button>
+          <div class="expand-field" style="justify-content:flex-end">
+            <button class="btn-clear" data-idx="${idx}" data-action="clearOverrides">Clear overrides</button>
           </div>
         </div>
       </td>
@@ -316,7 +297,6 @@ function renderSpellTable() {
     tbody.appendChild(trExp);
   });
 
-  // Bind expand buttons (delegated via parent binding already, but need click separately).
   tbody.querySelectorAll('.expand-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const idx = btn.dataset.idx;
@@ -333,7 +313,6 @@ function renderSpellTable() {
       const idx = parseInt(btn.dataset.idx, 10);
       spells[idx].castOverride   = null;
       spells[idx].recastOverride = null;
-      // Clear the override inputs in that row.
       const expRow = tbody.querySelector(`tr[data-exp-idx="${idx}"]`);
       expRow.querySelector('[data-field="castOverride"]').value   = '';
       expRow.querySelector('[data-field="recastOverride"]').value = '';
@@ -341,11 +320,11 @@ function renderSpellTable() {
   });
 }
 
-// ── Spell field change handler (delegated) ────────────────────────────────
+// ── Spell field change handler ─────────────────────────────────────────────
 
 function onSpellFieldChange(e) {
-  const el = e.target;
-  const idx = parseInt(el.dataset.idx, 10);
+  const el    = e.target;
+  const idx   = parseInt(el.dataset.idx, 10);
   const field = el.dataset.field;
   if (isNaN(idx) || !field) return;
 
@@ -355,7 +334,7 @@ function onSpellFieldChange(e) {
   if (field === 'enabled') {
     spell.enabled = el.checked;
     const mainRow = document.querySelector(`tr[data-idx="${idx}"]`);
-    mainRow && mainRow.classList.toggle('table-secondary', !spell.enabled);
+    mainRow && mainRow.classList.toggle('row-disabled', !spell.enabled);
   } else if (field === 'castOverride' || field === 'recastOverride') {
     spell[field] = el.value !== '' ? parseFloat(el.value) : null;
   } else {
@@ -374,7 +353,7 @@ function setAllEnabled(enabled) {
     const checkbox = document.querySelector(`input[data-idx="${idx}"][data-field="enabled"]`);
     if (checkbox) checkbox.checked = enabled;
     const row = document.querySelector(`tr[data-idx="${idx}"]`);
-    if (row) row.classList.toggle('table-secondary', !enabled);
+    if (row) row.classList.toggle('row-disabled', !enabled);
   });
   saveSpells();
 }
@@ -383,12 +362,9 @@ function setAllEnabled(enabled) {
 
 function filterSpellRows(query) {
   document.querySelectorAll('#spellTableBody tr[data-idx]').forEach(row => {
-    const name = row.dataset.name || '';
-    const visible = !query || name.includes(query);
+    const visible = !query || (row.dataset.name || '').includes(query);
     row.classList.toggle('d-none', !visible);
-    // Keep expand row in sync.
-    const idx = row.dataset.idx;
-    const expRow = document.querySelector(`tr[data-exp-idx="${idx}"]`);
+    const expRow = document.querySelector(`tr[data-exp-idx="${row.dataset.idx}"]`);
     if (expRow && !visible) expRow.classList.add('d-none');
   });
 }
@@ -408,15 +384,12 @@ function onCalculate() {
   };
 
   const results = [];
-
   for (const spell of spells) {
     if (!spell.enabled) continue;
     const r = calcSpellDPS(spell, fightInfo, stats);
     if (r && r.dps > 0) results.push({ spell, ...r });
   }
-
   results.sort((a, b) => b.dps - a.dps);
-
   renderResults(results);
 }
 
@@ -428,18 +401,18 @@ function renderResults(results) {
 
   for (const r of results) {
     const pct = (r.dps / topDps) * 100;
-    const tr = document.createElement('tr');
-    tr.className = 'dps-bar-row';
+    const tr  = document.createElement('tr');
+    tr.className = 'dps-row';
     tr.style.setProperty('--bar-pct', `${pct.toFixed(1)}%`);
     tr.innerHTML = `
-      <td>${escHtml(r.spell.name)}${r.spell.isAA ? ' <span class="badge bg-info text-dark" style="font-size:.65em">AA</span>' : ''}</td>
+      <td>${escHtml(r.spell.name)}${r.spell.isAA ? ' <span class="aa-badge">AA</span>' : ''}</td>
       <td>${TYPE_BADGES[r.spell.targetType] || ''}</td>
-      <td>${r.effectiveCast.toFixed(2)}s</td>
-      <td>${r.effectiveRecast.toFixed(1)}s</td>
-      <td>${r.targetsHit}</td>
-      <td>${fmt(r.avgDmgPerCast)}</td>
-      <td class="text-end fw-semibold">${fmt(r.dps)}</td>
-      <td class="text-end text-muted" style="font-size:.8em;min-width:3.5em">${pct.toFixed(0)}%</td>
+      <td class="td-muted">${r.effectiveCast.toFixed(2)}s</td>
+      <td class="td-muted">${r.effectiveRecast.toFixed(1)}s</td>
+      <td class="td-muted">${r.targetsHit}</td>
+      <td class="td-muted">${fmt(r.avgDmgPerCast)}</td>
+      <td class="dps-value">${fmt(r.dps)}</td>
+      <td class="dps-rel">${pct.toFixed(0)}%</td>
     `;
     tbody.appendChild(tr);
   }
@@ -450,15 +423,10 @@ function renderResults(results) {
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
-// Returns an <img> for the spell icon, hidden on error.
-// URL pattern TBD — wire up icon.id here when the Census serving endpoint
-// or a reliable alternative (Wiki CDN / self-hosted) is confirmed.
 function spellIconHtml(spell) {
   if (!spell.icon || !spell.icon.id) return '';
-  // TODO: replace '#' with the resolved icon URL, e.g.:
-  //   `https://example.com/eq2/icons/${spell.icon.id}.png`
-  const src = '#';
-  return `<img src="${src}" class="spell-icon me-1"
+  const src = `img/icons/icon_spell_${spell.icon.id}.png`;
+  return `<img src="${src}" class="spell-icon" style="margin-right:7px"
                alt="" loading="lazy"
                onerror="this.style.display='none'">`;
 }
