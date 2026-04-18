@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -36,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 245,
     "dmgHigh": 331,
     "maxTargetsApi": null,
@@ -63,6 +69,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -85,6 +94,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 214,
     "dmgHigh": 290,
     "maxTargetsApi": null,
@@ -95,7 +107,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces duration of Brainburst by 2 seconds."
+    }
   },
   {
     "uid": "79027827",
@@ -107,6 +124,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 416,
     "dmgHigh": 508,
     "maxTargetsApi": null,
@@ -117,7 +137,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration by 0.3 seconds. | Reduces resistibility by 5%."
+    }
   },
   {
     "uid": "4226386406",
@@ -129,6 +154,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -139,7 +167,12 @@
       "heroic_op": 24
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 5%. | Increases duration of stifle by 0.3 seconds."
+    }
   },
   {
     "uid": "4029655993",
@@ -151,6 +184,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 397,
     "dmgHigh": 486,
     "maxTargetsApi": null,
@@ -161,7 +197,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 2,
+      "description": "Increases triggers of Theorems by 1. | Increases the damage of Theorems by 5%."
+    }
   },
   {
     "uid": "1768086763",
@@ -173,6 +214,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -195,6 +239,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -222,6 +269,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 82,
     "dmgHigh": 100,
     "maxTargetsApi": null,
@@ -232,7 +282,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "When Chromatic Storm wears off, your opponents take additional mental damage."
+    }
   },
   {
     "uid": "2843525738",
@@ -244,6 +299,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -254,7 +312,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases offensive skill reduction by 3%."
+    }
   },
   {
     "uid": "3595768562",
@@ -266,6 +329,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -276,7 +342,12 @@
       "heroic_op": 27
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Entrance by 1.5 seconds. | Reduces resistibility by 5%."
+    }
   },
   {
     "uid": "3517674506",
@@ -288,6 +359,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -298,7 +372,12 @@
       "heroic_op": 24
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Phantasmal Awe by 0.5 seconds. | Reduces resistibility by 5%."
+    }
   },
   {
     "uid": "332291182",
@@ -310,6 +389,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 339,
     "dmgHigh": 415,
     "maxTargetsApi": null,
@@ -332,6 +414,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -342,7 +427,12 @@
       "heroic_op": 24
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Regalia by 1 seconds. | Reduces resistibility by 5%."
+    }
   },
   {
     "uid": "2387448623",
@@ -354,6 +444,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 307,
     "dmgHigh": 461,
     "maxTargetsApi": null,
@@ -376,6 +469,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 88,
     "dmgHigh": 107,
     "maxTargetsApi": null,
@@ -386,7 +482,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "When Nightmare wears off, your opponents take additional mental damage."
+    }
   },
   {
     "uid": "1316353803",
@@ -398,6 +499,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 0.2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 189,
     "dmgHigh": 231,
     "maxTargetsApi": null,
@@ -408,7 +512,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "When Chromatic Shower wears off, your victims suffer additional mental damage."
+    }
   },
   {
     "uid": "2526976020",
@@ -420,12 +529,90 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
     "aoeRadius": null,
     "icon": {
       "id": 654,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1051704435",
+    "name": "Spellblade's Counter",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 8,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 590,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "152789620",
+    "name": "Counterblade",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 12,
+    "durationSecs": 12,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 649,
+    "dmgHigh": 1082,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 606,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2685326150",
+    "name": "Nullifying Staff",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 560,
       "backdrop": -1,
       "heroic_op": -1
     },
@@ -442,6 +629,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 2,
     "dmgHigh": 3,
     "maxTargetsApi": null,

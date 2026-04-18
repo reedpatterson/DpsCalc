@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 135,
     "dmgHigh": 226,
     "maxTargetsApi": null,
@@ -19,7 +22,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases heal amount by 5% of the base value."
+    }
   },
   {
     "uid": "3285595458",
@@ -31,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 148,
     "dmgHigh": 246,
     "maxTargetsApi": null,
@@ -53,6 +64,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 462,
     "dmgHigh": 771,
     "maxTargetsApi": 8,
@@ -63,7 +77,12 @@
       "heroic_op": 4
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 7%."
+    }
   },
   {
     "uid": "2377955880",
@@ -75,6 +94,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -97,6 +119,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 131,
     "dmgHigh": 218,
     "maxTargetsApi": null,
@@ -119,6 +144,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 200,
     "dmgHigh": 334,
     "maxTargetsApi": 8,
@@ -129,7 +157,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "2981440021",
@@ -141,6 +174,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -151,7 +187,12 @@
       "heroic_op": 2
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases divine resist reduction by 8%."
+    }
   },
   {
     "uid": "1551128779",
@@ -163,6 +204,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 243,
     "dmgHigh": 405,
     "maxTargetsApi": null,
@@ -185,6 +229,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 601,
     "dmgHigh": 1002,
     "maxTargetsApi": null,
@@ -207,6 +254,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 252,
     "dmgHigh": 420,
     "maxTargetsApi": null,
@@ -229,6 +279,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 89,
     "dmgHigh": 149,
     "maxTargetsApi": null,
@@ -251,6 +304,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 256,
     "dmgHigh": 427,
     "maxTargetsApi": 8,
@@ -261,7 +317,12 @@
       "heroic_op": 5
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "841651524",
@@ -273,6 +334,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 256,
     "dmgHigh": 427,
     "maxTargetsApi": null,
@@ -295,6 +359,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 253,
     "dmgHigh": 421,
     "maxTargetsApi": null,
@@ -305,7 +372,12 @@
       "heroic_op": 2
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "3969233978",
@@ -317,6 +389,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 13,
     "dmgHigh": 17,
     "maxTargetsApi": 8,
@@ -324,6 +399,31 @@
     "icon": {
       "id": 549,
       "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "593821678",
+    "name": "Joust",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 257,
+    "dmgHigh": 386,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 660,
+      "backdrop": -1,
       "heroic_op": -1
     },
     "isAA": true,
@@ -339,12 +439,90 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 218,
     "dmgHigh": 363,
     "maxTargetsApi": null,
     "aoeRadius": null,
     "icon": {
       "id": 696,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1181888262",
+    "name": "Swift Attack",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 20,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 589,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "95794317",
+    "name": "Hammer Ground",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 90,
+    "dmgHigh": 151,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 620,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3126652736",
+    "name": "Lance",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 36,
+    "targetType": "aoe",
+    "isDot": true,
+    "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 469,
+    "dmgHigh": 783,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 558,
       "backdrop": -1,
       "heroic_op": -1
     },

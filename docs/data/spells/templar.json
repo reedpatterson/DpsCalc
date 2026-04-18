@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -36,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 265,
     "dmgHigh": 323,
     "maxTargetsApi": null,
@@ -63,6 +69,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -73,7 +82,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases trigger chance by 2%. | Increases effectiveness of Mark of Divinity  and Mark of Nobility by 3."
+    }
   },
   {
     "uid": "2817681851",
@@ -85,6 +99,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -112,6 +129,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": null,
+    "triggerRatePerMin": 4,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -122,7 +142,12 @@
       "heroic_op": 12
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases trigger chance of Involuntary Gift by 2%."
+    }
   },
   {
     "uid": "4092091298",
@@ -134,6 +159,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -161,6 +189,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -171,7 +202,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases heal amount by 10%."
+    }
   },
   {
     "uid": "2821787238",
@@ -183,6 +219,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -193,7 +232,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases effectiveness of Rebuke by 4. | Improves mitigation reduction by 7%. | Reduces resistibility by 3%."
+    }
   },
   {
     "uid": "1654623087",
@@ -205,6 +249,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 250,
     "dmgHigh": 305,
     "maxTargetsApi": null,
@@ -232,6 +279,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -242,7 +292,12 @@
       "heroic_op": 16
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Awestruck by 0.3 seconds. | Increases effectiveness of Awestruck by 4. | Reduces resistibility by 3%."
+    }
   },
   {
     "uid": "2716958141",
@@ -254,6 +309,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 424,
     "dmgHigh": 519,
     "maxTargetsApi": null,
@@ -281,6 +339,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -308,6 +369,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 1,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -315,6 +379,31 @@
     "icon": {
       "id": 184,
       "backdrop": 312,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "223446872",
+    "name": "Hammer Divine Smite",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 621,
+      "backdrop": -1,
       "heroic_op": -1
     },
     "isAA": true,
@@ -330,12 +419,40 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 242,
     "dmgHigh": 403,
     "maxTargetsApi": null,
     "aoeRadius": 15,
     "icon": {
       "id": 645,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2717984653",
+    "name": "Skull Crack",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 20,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 591,
       "backdrop": -1,
       "heroic_op": -1
     },
@@ -352,6 +469,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 257,
     "dmgHigh": 428,
     "maxTargetsApi": null,
@@ -374,6 +494,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,

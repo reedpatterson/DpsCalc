@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -31,6 +34,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 197,
     "dmgHigh": 241,
     "maxTargetsApi": null,
@@ -41,7 +47,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves damage per second reduction by 2%."
+    }
   },
   {
     "uid": "340135132",
@@ -53,6 +64,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 328,
     "dmgHigh": 548,
     "maxTargetsApi": null,
@@ -63,7 +77,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces riposte damage by 5%."
+    }
   },
   {
     "uid": "88469586",
@@ -75,6 +94,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 178,
     "dmgHigh": 298,
     "maxTargetsApi": null,
@@ -102,6 +124,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 1,
+    "triggerRatePerMin": null,
     "dmgLow": 366,
     "dmgHigh": 448,
     "maxTargetsApi": null,
@@ -124,6 +149,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 188,
     "dmgHigh": 314,
     "maxTargetsApi": null,
@@ -134,7 +162,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases intelligence reduction by 8%."
+    }
   },
   {
     "uid": "3422435059",
@@ -146,6 +179,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -168,6 +204,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 314,
     "dmgHigh": 384,
     "maxTargetsApi": null,
@@ -178,7 +217,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves mitigation reduction by 5%."
+    }
   },
   {
     "uid": "4053964359",
@@ -190,6 +234,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 432,
     "dmgHigh": 721,
     "maxTargetsApi": 8,
@@ -200,7 +247,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases radius of Dashing Swathe by 1. | Increases hit chance by 5%."
+    }
   },
   {
     "uid": "3140011716",
@@ -212,6 +264,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 432,
     "dmgHigh": 721,
     "maxTargetsApi": 8,
@@ -222,7 +277,12 @@
       "heroic_op": 37
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 3%."
+    }
   },
   {
     "uid": "2856450007",
@@ -234,6 +294,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 356,
     "dmgHigh": 593,
     "maxTargetsApi": null,
@@ -256,6 +319,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -266,7 +332,12 @@
       "heroic_op": 41
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases wisdom reduction by 6%."
+    }
   },
   {
     "uid": "4176391358",
@@ -278,6 +349,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 155,
     "dmgHigh": 259,
     "maxTargetsApi": null,
@@ -300,6 +374,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -322,6 +399,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 272,
     "dmgHigh": 454,
     "maxTargetsApi": null,
@@ -332,7 +412,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves skill reductions by 3%."
+    }
   },
   {
     "uid": "2242907382",
@@ -344,6 +429,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 463,
     "dmgHigh": 771,
     "maxTargetsApi": null,
@@ -354,7 +442,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases agility reduction by 6%."
+    }
   },
   {
     "uid": "3608217203",
@@ -366,6 +459,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -388,6 +484,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 207,
     "dmgHigh": 345,
     "maxTargetsApi": null,
@@ -398,7 +497,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 1,
+      "description": "Increases resistibility of targets spells by 13%."
+    }
   },
   {
     "uid": "1321978072",
@@ -410,6 +514,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -432,6 +539,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 322,
     "dmgHigh": 537,
     "maxTargetsApi": 8,
@@ -442,7 +552,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases radius by 1. | Increases hit chance by 5%."
+    }
   },
   {
     "uid": "932761693",
@@ -454,6 +569,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 146,
     "dmgHigh": 244,
     "maxTargetsApi": null,
@@ -464,6 +582,186 @@
       "heroic_op": 36
     },
     "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves crush, slash, and pierce resist reduction by 5%."
+    }
+  },
+  {
+    "uid": "3050853275",
+    "name": "Traumatic Swipe",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 30,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 201,
+    "dmgHigh": 335,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 612,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3938346731",
+    "name": "Swear",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "encounter",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 0,
+    "dmgHigh": 0,
+    "maxTargetsApi": null,
+    "aoeRadius": 15,
+    "icon": {
+      "id": 603,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "4063222444",
+    "name": "Deft Disarm",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 3,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 654,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3272189339",
+    "name": "Torporous Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 30,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 670,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "657313873",
+    "name": "Coule",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 60,
+    "durationSecs": 20,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 402,
+    "dmgHigh": 671,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 690,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3086796911",
+    "name": "Boot Dagger",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0.1,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 135,
+    "dmgHigh": 226,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 556,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1745609220",
+    "name": "Walk the Plank",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 1.8,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 656,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
     "enhanceAA": null
   }
 ]

@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -19,7 +22,12 @@
       "heroic_op": -1
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 1,
+      "description": "Adds an additional effect on Verdict that affects the creature when they cross the health threshold."
+    }
   },
   {
     "uid": "1018342684",
@@ -31,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 5,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -41,7 +52,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 3,
+      "description": "Increases trigger count by 1. | Increases duration by 20%. | Increases damage by 10%."
+    }
   },
   {
     "uid": "581244093",
@@ -53,6 +69,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -75,6 +94,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 265,
     "dmgHigh": 323,
     "maxTargetsApi": null,
@@ -97,6 +119,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 315,
     "dmgHigh": 525,
     "maxTargetsApi": null,
@@ -107,7 +132,12 @@
       "heroic_op": 13
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "4155570068",
@@ -119,6 +149,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 257,
     "dmgHigh": 429,
     "maxTargetsApi": null,
@@ -129,7 +162,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 9%."
+    }
   },
   {
     "uid": "3198510019",
@@ -141,6 +179,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 275,
     "dmgHigh": 337,
     "maxTargetsApi": null,
@@ -163,6 +204,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 2.2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -185,6 +229,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -195,7 +242,12 @@
       "heroic_op": 16
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases strength and intelligence reduction by 7%. | Increases bleedthrough reduction of Deny by 4%."
+    }
   },
   {
     "uid": "3937417336",
@@ -207,6 +259,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -217,7 +272,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases effectiveness of Forced Obedience by 7. | Increases offensive skill reduction by 7%."
+    }
   },
   {
     "uid": "230559776",
@@ -229,6 +289,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -239,7 +302,12 @@
       "heroic_op": 15
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases effectiveness of Condemn by 4. | Reduces resistibility by 3%. | Increases the resistance reduction effects by 7%."
+    }
   },
   {
     "uid": "986117574",
@@ -251,6 +319,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 142,
     "dmgHigh": 173,
     "maxTargetsApi": null,
@@ -273,6 +344,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -295,6 +369,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 85,
     "dmgHigh": 104,
     "maxTargetsApi": null,
@@ -317,6 +394,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -344,6 +424,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 432,
     "dmgHigh": 528,
     "maxTargetsApi": -1,
@@ -354,6 +437,36 @@
       "heroic_op": 16
     },
     "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 10%."
+    }
+  },
+  {
+    "uid": "1138212318",
+    "name": "Strike of Corruption",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 108,
+    "dmgHigh": 132,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 159,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": true,
     "enhanceAA": null
   },
   {
@@ -366,6 +479,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -373,6 +489,131 @@
     "icon": {
       "id": 204,
       "backdrop": 312,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1175854041",
+    "name": "Writhing Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 12,
+    "durationSecs": 12,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 145,
+    "dmgHigh": 177,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 182,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3745469497",
+    "name": "Strike of Flames",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 20,
+    "durationSecs": 16,
+    "targetType": "st",
+    "isDot": true,
+    "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 203,
+    "dmgHigh": 248,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 190,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2664850881",
+    "name": "Invocation Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 8,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 335,
+    "dmgHigh": 410,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 152,
+      "backdrop": 315,
+      "heroic_op": 14
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3411247979",
+    "name": "Litany Circle",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 20,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 435,
+    "dmgHigh": 531,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 222,
+      "backdrop": 313,
+      "heroic_op": 14
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "223446872",
+    "name": "Hammer Divine Smite",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 621,
+      "backdrop": -1,
       "heroic_op": -1
     },
     "isAA": true,
@@ -388,12 +629,40 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 242,
     "dmgHigh": 403,
     "maxTargetsApi": null,
     "aoeRadius": 15,
     "icon": {
       "id": 645,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2717984653",
+    "name": "Skull Crack",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 20,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 591,
       "backdrop": -1,
       "heroic_op": -1
     },
@@ -410,6 +679,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 257,
     "dmgHigh": 428,
     "maxTargetsApi": null,
@@ -432,6 +704,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,

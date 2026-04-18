@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 25,
     "dmgHigh": 30,
     "maxTargetsApi": null,
@@ -31,6 +34,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 59,
     "dmgHigh": 79,
     "maxTargetsApi": null,
@@ -41,7 +47,12 @@
       "heroic_op": 25
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 1%. | Reduces duration by 0.5 seconds."
+    }
   },
   {
     "uid": "2052228351",
@@ -53,6 +64,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 72,
     "dmgHigh": 109,
     "maxTargetsApi": null,
@@ -75,6 +89,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -97,6 +114,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 91,
     "dmgHigh": 111,
     "maxTargetsApi": null,
@@ -107,7 +127,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces duration of Bloodcoil and Boil Blood by 2 seconds. | Increases damage of Bloodcoil and Boil Blood by 1%."
+    }
   },
   {
     "uid": "1722699703",
@@ -119,6 +144,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -146,6 +174,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -156,7 +187,12 @@
       "heroic_op": -1
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases strength and intelligence reduction by 7%."
+    }
   },
   {
     "uid": "1551660320",
@@ -168,6 +204,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -195,6 +234,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -217,6 +259,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -244,6 +289,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 82,
     "dmgHigh": 100,
     "maxTargetsApi": null,
@@ -271,6 +319,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -293,6 +344,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -320,6 +374,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -330,7 +387,12 @@
       "heroic_op": 24
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 3%. | Increases duration by 5.5%."
+    }
   },
   {
     "uid": "1820776489",
@@ -342,6 +404,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -352,7 +417,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases effectiveness of Mortality Mark by 5. | Damage increase and wisdom reduction strengthened by 7%."
+    }
   },
   {
     "uid": "1861782795",
@@ -364,6 +434,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -374,7 +447,12 @@
       "heroic_op": -1
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 2,
+      "description": "Adds 1 additional minion."
+    }
   },
   {
     "uid": "3954923675",
@@ -386,6 +464,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 109,
     "dmgHigh": 121,
     "maxTargetsApi": null,
@@ -408,6 +489,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 1007,
     "dmgHigh": 1679,
     "maxTargetsApi": 8,
@@ -430,6 +514,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 151,
     "dmgHigh": 251,
     "maxTargetsApi": null,
@@ -452,6 +539,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -474,6 +564,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 3,
     "dmgHigh": 4,
     "maxTargetsApi": null,

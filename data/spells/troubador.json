@@ -9,6 +9,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 79,
     "dmgHigh": 131,
     "maxTargetsApi": 6,
@@ -19,7 +22,12 @@
       "heroic_op": 38
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage of Breathtaking Bellow by 2%."
+    }
   },
   {
     "uid": "3970855446",
@@ -31,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 164,
     "dmgHigh": 274,
     "maxTargetsApi": null,
@@ -53,6 +64,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 370,
     "dmgHigh": 617,
     "maxTargetsApi": null,
@@ -80,6 +94,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 138,
     "dmgHigh": 231,
     "maxTargetsApi": null,
@@ -90,7 +107,12 @@
       "heroic_op": 37
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Singing Shot by 0.5 seconds."
+    }
   },
   {
     "uid": "398033954",
@@ -102,6 +124,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -112,7 +137,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases spell resist reduction by 5%."
+    }
   },
   {
     "uid": "3422435059",
@@ -124,6 +154,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -146,6 +179,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -168,6 +204,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -178,7 +217,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases wisdom reduction by 10%."
+    }
   },
   {
     "uid": "3602019888",
@@ -190,6 +234,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 262,
     "dmgHigh": 437,
     "maxTargetsApi": null,
@@ -200,7 +247,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases spell resistance reductions by 5%."
+    }
   },
   {
     "uid": "3863430755",
@@ -212,6 +264,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -222,7 +277,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration by 2.8%. | Reduces resistibility by 3%."
+    }
   },
   {
     "uid": "109462599",
@@ -234,6 +294,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -244,7 +307,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves attribute, combat skill and spell skill reduction by 5%."
+    }
   },
   {
     "uid": "3202264280",
@@ -256,6 +324,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 490,
     "dmgHigh": 816,
     "maxTargetsApi": null,
@@ -266,7 +337,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves intelligence reduction by 6%."
+    }
   },
   {
     "uid": "588336933",
@@ -278,6 +354,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 60,
     "dmgHigh": 100,
     "maxTargetsApi": null,
@@ -300,6 +379,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -310,7 +392,12 @@
       "heroic_op": 41
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases Arcane resist reduction by 5%."
+    }
   },
   {
     "uid": "2990472411",
@@ -322,6 +409,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 164,
     "dmgHigh": 274,
     "maxTargetsApi": null,
@@ -344,6 +434,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 707,
     "dmgHigh": 1178,
     "maxTargetsApi": null,
@@ -371,6 +464,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 318,
     "dmgHigh": 530,
     "maxTargetsApi": 8,
@@ -398,6 +494,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 110,
     "dmgHigh": 183,
     "maxTargetsApi": null,
@@ -420,6 +519,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -430,7 +532,12 @@
       "heroic_op": 38
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Lullaby by 2.8%. | Reduces resistibility of Lullaby by 4%."
+    }
   },
   {
     "uid": "1953336136",
@@ -442,6 +549,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -449,6 +559,131 @@
     "icon": {
       "id": 255,
       "backdrop": 312,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1056570155",
+    "name": "Messenger's Letter",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 682,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "836688594",
+    "name": "Round Bash",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 211,
+    "dmgHigh": 352,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 657,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "100997431",
+    "name": "Turnstrike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 60,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 181,
+    "dmgHigh": 302,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 643,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2076487299",
+    "name": "Bump",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0.1,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 181,
+    "dmgHigh": 302,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 567,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2434035883",
+    "name": "Rhythm Blade",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 30,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 589,
+      "backdrop": -1,
       "heroic_op": -1
     },
     "isAA": true,

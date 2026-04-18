@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 90,
     "dmgHigh": 271,
     "maxTargetsApi": null,
@@ -31,6 +34,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 82,
     "dmgHigh": 246,
     "maxTargetsApi": null,
@@ -53,6 +59,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -75,6 +84,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 128,
     "dmgHigh": 385,
     "maxTargetsApi": null,
@@ -102,6 +114,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 257,
     "dmgHigh": 428,
     "maxTargetsApi": null,
@@ -112,7 +127,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "3523205231",
@@ -124,6 +144,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 87,
     "dmgHigh": 262,
     "maxTargetsApi": null,
@@ -146,6 +169,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 231,
     "dmgHigh": 695,
     "maxTargetsApi": 8,
@@ -156,7 +182,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
   },
   {
     "uid": "2848382238",
@@ -168,6 +199,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -190,6 +224,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 69,
     "dmgHigh": 208,
     "maxTargetsApi": null,
@@ -200,7 +237,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage and hate increase amount by 4%."
+    }
   },
   {
     "uid": "2104860038",
@@ -212,6 +254,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 291,
     "dmgHigh": 485,
     "maxTargetsApi": null,
@@ -222,7 +267,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases offensive skill reduction by 10%."
+    }
   },
   {
     "uid": "2458290794",
@@ -234,6 +284,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 212,
     "dmgHigh": 636,
     "maxTargetsApi": null,
@@ -244,7 +297,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Demolish and Annihilate by 5%."
+    }
   },
   {
     "uid": "2264379681",
@@ -256,6 +314,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 119,
     "dmgHigh": 359,
     "maxTargetsApi": null,
@@ -266,7 +327,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration of Body Check by 12%."
+    }
   },
   {
     "uid": "3648884997",
@@ -278,6 +344,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 36,
     "dmgHigh": 109,
     "maxTargetsApi": null,
@@ -288,7 +357,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases attack speed reduction by 2%."
+    }
   },
   {
     "uid": "516451451",
@@ -300,6 +374,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 488,
     "dmgHigh": 908,
     "maxTargetsApi": 8,
@@ -310,6 +387,111 @@
       "heroic_op": 0
     },
     "isAA": false,
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 5%."
+    }
+  },
+  {
+    "uid": "3503618023",
+    "name": "Dragoon Spin",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 306,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "106015757",
+    "name": "Acceleration Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
+    "dmgLow": 167,
+    "dmgHigh": 279,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 656,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2778411985",
+    "name": "Belly Smash",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 211,
+    "dmgHigh": 352,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 581,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3807587284",
+    "name": "Executioner's Wrath",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 612,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
     "enhanceAA": null
   }
 ]

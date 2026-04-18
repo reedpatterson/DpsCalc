@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 164,
     "dmgHigh": 274,
     "maxTargetsApi": null,
@@ -19,7 +22,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases overtime damage by 7%."
+    }
   },
   {
     "uid": "365548064",
@@ -31,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 135,
     "dmgHigh": 226,
     "maxTargetsApi": null,
@@ -53,6 +64,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 633,
     "dmgHigh": 1056,
     "maxTargetsApi": null,
@@ -75,6 +89,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 283,
     "dmgHigh": 472,
     "maxTargetsApi": null,
@@ -97,6 +114,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 503,
     "dmgHigh": 839,
     "maxTargetsApi": null,
@@ -107,7 +127,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves defense reduction by 4%."
+    }
   },
   {
     "uid": "3422435059",
@@ -119,6 +144,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -141,6 +169,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 565,
     "dmgHigh": 942,
     "maxTargetsApi": 8,
@@ -163,6 +194,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 514,
     "dmgHigh": 857,
     "maxTargetsApi": null,
@@ -173,7 +207,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases the duration by 12.5%."
+    }
   },
   {
     "uid": "852628420",
@@ -185,6 +224,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 262,
     "dmgHigh": 437,
     "maxTargetsApi": null,
@@ -207,6 +249,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 5,
+    "triggerRatePerMin": null,
     "dmgLow": 216,
     "dmgHigh": 360,
     "maxTargetsApi": null,
@@ -217,7 +262,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases trigger chance of Death Mark by 1%."
+    }
   },
   {
     "uid": "388830872",
@@ -229,6 +279,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 590,
     "dmgHigh": 983,
     "maxTargetsApi": null,
@@ -239,7 +292,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases stifle duration by 12.5%."
+    }
   },
   {
     "uid": "3958420491",
@@ -251,6 +309,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 391,
     "dmgHigh": 652,
     "maxTargetsApi": null,
@@ -273,6 +334,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -300,6 +364,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -310,7 +377,12 @@
       "heroic_op": 41
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases noxious resist reduction by 6%."
+    }
   },
   {
     "uid": "219797395",
@@ -322,6 +394,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 511,
     "dmgHigh": 851,
     "maxTargetsApi": null,
@@ -344,6 +419,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 815,
     "dmgHigh": 1359,
     "maxTargetsApi": null,
@@ -366,6 +444,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 1631,
     "dmgHigh": 2718,
     "maxTargetsApi": null,
@@ -388,6 +469,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 247,
     "dmgHigh": 412,
     "maxTargetsApi": null,
@@ -398,7 +482,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases overtime damage by 4%."
+    }
   },
   {
     "uid": "227302405",
@@ -410,6 +499,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 725,
     "dmgHigh": 1209,
     "maxTargetsApi": null,
@@ -432,6 +524,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 158,
     "dmgHigh": 263,
     "maxTargetsApi": null,
@@ -442,7 +537,12 @@
       "heroic_op": 36
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases overtime damage by 6%."
+    }
   },
   {
     "uid": "3731354225",
@@ -454,6 +554,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -476,6 +579,9 @@
     "targetType": "aoe",
     "isDot": true,
     "dotInterval": 2,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 322,
     "dmgHigh": 537,
     "maxTargetsApi": 8,
@@ -486,7 +592,12 @@
       "heroic_op": 40
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases overtime damage by 5%."
+    }
   },
   {
     "uid": "3794044270",
@@ -498,6 +609,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 5495,
     "dmgHigh": 9159,
     "maxTargetsApi": null,
@@ -520,6 +634,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 439,
     "dmgHigh": 537,
     "maxTargetsApi": null,
@@ -530,6 +647,156 @@
       "heroic_op": -1
     },
     "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1509655257",
+    "name": "Placating Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 589,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2334505118",
+    "name": "Point Blank Shot",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 181,
+    "dmgHigh": 302,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 694,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3494970653",
+    "name": "Smoke Bomb",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 180,
+    "durationSecs": 0.1,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 11,
+    "dmgHigh": 20,
+    "maxTargetsApi": 12,
+    "aoeRadius": 15,
+    "icon": {
+      "id": 696,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2761739830",
+    "name": "Spinning Spear",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": 8,
+    "aoeRadius": 10,
+    "icon": {
+      "id": 660,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3846422792",
+    "name": "Poison Combination",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 693,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1041177273",
+    "name": "Bladed Opening",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 671,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
     "enhanceAA": null
   }
 ]

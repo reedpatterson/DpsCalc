@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 135,
     "dmgHigh": 226,
     "maxTargetsApi": null,
@@ -19,7 +22,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 6%."
+    }
   },
   {
     "uid": "4046724764",
@@ -31,6 +39,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 123,
     "dmgHigh": 205,
     "maxTargetsApi": null,
@@ -53,6 +64,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -75,6 +89,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 154,
     "dmgHigh": 257,
     "maxTargetsApi": null,
@@ -97,6 +114,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -107,7 +127,12 @@
       "heroic_op": 5
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases duration by 0.4 seconds. | Improves the radius by 20%."
+    }
   },
   {
     "uid": "1897184165",
@@ -119,6 +144,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 144,
     "dmgHigh": 240,
     "maxTargetsApi": null,
@@ -129,7 +157,12 @@
       "heroic_op": 4
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 6%."
+    }
   },
   {
     "uid": "2205865074",
@@ -141,6 +174,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 267,
     "dmgHigh": 445,
     "maxTargetsApi": 8,
@@ -163,6 +199,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -185,6 +224,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 476,
     "dmgHigh": 794,
     "maxTargetsApi": null,
@@ -195,7 +237,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 6%."
+    }
   },
   {
     "uid": "3922605703",
@@ -207,6 +254,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 69,
     "dmgHigh": 115,
     "maxTargetsApi": null,
@@ -229,6 +279,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 5,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 121,
     "dmgHigh": 202,
     "maxTargetsApi": null,
@@ -251,6 +304,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 282,
     "dmgHigh": 471,
     "maxTargetsApi": null,
@@ -261,7 +317,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases damage by 6%."
+    }
   },
   {
     "uid": "496173566",
@@ -273,6 +334,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 353,
     "dmgHigh": 589,
     "maxTargetsApi": null,
@@ -295,6 +359,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 424,
     "dmgHigh": 707,
     "maxTargetsApi": null,
@@ -317,6 +384,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 179,
     "dmgHigh": 299,
     "maxTargetsApi": null,
@@ -339,6 +409,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 54,
     "dmgHigh": 91,
     "maxTargetsApi": null,
@@ -361,6 +434,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -371,6 +447,131 @@
       "heroic_op": 2
     },
     "isAA": false,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2733792540",
+    "name": "Lay Waste",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 392,
+    "dmgHigh": 654,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 343,
+      "backdrop": 315,
+      "heroic_op": 3
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3503618023",
+    "name": "Dragoon Spin",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 45,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 306,
+      "backdrop": 313,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "106015757",
+    "name": "Acceleration Strike",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 24,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
+    "dmgLow": 167,
+    "dmgHigh": 279,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 656,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2778411985",
+    "name": "Belly Smash",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 211,
+    "dmgHigh": 352,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 581,
+      "backdrop": 315,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3807587284",
+    "name": "Executioner's Wrath",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 612,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
     "enhanceAA": null
   }
 ]

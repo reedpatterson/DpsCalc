@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 107,
     "dmgHigh": 179,
     "maxTargetsApi": null,
@@ -31,6 +34,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 215,
     "dmgHigh": 359,
     "maxTargetsApi": null,
@@ -41,7 +47,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases wisdom reduction by 12%. | Increases the base damage by 2%."
+    }
   },
   {
     "uid": "2953140347",
@@ -53,6 +64,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 462,
     "dmgHigh": 771,
     "maxTargetsApi": 8,
@@ -80,6 +94,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 113,
     "dmgHigh": 139,
     "maxTargetsApi": null,
@@ -90,7 +107,12 @@
       "heroic_op": 2
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 3,
+      "description": "Reduces resistibility by 10%."
+    }
   },
   {
     "uid": "1971779886",
@@ -102,6 +124,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -112,7 +137,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Adds a damage increasing effect that increases with each rank that also increases the Stamina of the Shadowknight."
+    }
   },
   {
     "uid": "1162736730",
@@ -124,6 +154,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 189,
     "dmgHigh": 315,
     "maxTargetsApi": null,
@@ -151,6 +184,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 131,
     "dmgHigh": 218,
     "maxTargetsApi": null,
@@ -161,7 +197,12 @@
       "heroic_op": 4
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Improves the damage by 5%."
+    }
   },
   {
     "uid": "861050775",
@@ -173,6 +214,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 2295,
     "dmgHigh": 3825,
     "maxTargetsApi": null,
@@ -195,6 +239,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -222,6 +269,9 @@
     "targetType": "aoe",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 233,
     "dmgHigh": 389,
     "maxTargetsApi": 8,
@@ -244,6 +294,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -266,6 +319,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 182,
     "dmgHigh": 273,
     "maxTargetsApi": null,
@@ -276,7 +332,12 @@
       "heroic_op": 0
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Adds lifetap effect to Shadow Coil. | Reduces the duration by 10%."
+    }
   },
   {
     "uid": "930361376",
@@ -288,6 +349,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 417,
     "dmgHigh": 694,
     "maxTargetsApi": null,
@@ -310,6 +374,9 @@
     "targetType": "aoe",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 6,
     "dmgHigh": 8,
     "maxTargetsApi": null,
@@ -332,6 +399,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 513,
     "dmgHigh": 854,
     "maxTargetsApi": null,
@@ -354,6 +424,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 2,
+    "isTrigger": true,
+    "triggerCount": 1,
+    "triggerRatePerMin": null,
     "dmgLow": 255,
     "dmgHigh": 311,
     "maxTargetsApi": null,
@@ -376,6 +449,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 270,
     "dmgHigh": 450,
     "maxTargetsApi": null,
@@ -398,6 +474,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 107,
     "dmgHigh": 179,
     "maxTargetsApi": null,
@@ -408,7 +487,12 @@
       "heroic_op": 3
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases taunt and damage amount by 4%."
+    }
   },
   {
     "uid": "1274813334",
@@ -420,6 +504,9 @@
     "targetType": "aoe",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -442,6 +529,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 352,
     "dmgHigh": 430,
     "maxTargetsApi": null,
@@ -469,6 +559,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": 8,
@@ -482,6 +575,31 @@
     "enhanceAA": null
   },
   {
+    "uid": "593821678",
+    "name": "Joust",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 257,
+    "dmgHigh": 386,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 660,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
     "uid": "4127236251",
     "name": "Legionnaire's Smite",
     "level": 70,
@@ -491,12 +609,90 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 218,
     "dmgHigh": 363,
     "maxTargetsApi": null,
     "aoeRadius": null,
     "icon": {
       "id": 696,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1181888262",
+    "name": "Swift Attack",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 20,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 166,
+    "dmgHigh": 276,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 589,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "95794317",
+    "name": "Hammer Ground",
+    "level": 70,
+    "castSecs": 1,
+    "recastSecs": 60,
+    "durationSecs": 0,
+    "targetType": "aoe",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 90,
+    "dmgHigh": 151,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 620,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "3126652736",
+    "name": "Lance",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 45,
+    "durationSecs": 36,
+    "targetType": "aoe",
+    "isDot": true,
+    "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 469,
+    "dmgHigh": 783,
+    "maxTargetsApi": 8,
+    "aoeRadius": 7.5,
+    "icon": {
+      "id": 558,
       "backdrop": -1,
       "heroic_op": -1
     },

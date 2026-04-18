@@ -4,7 +4,9 @@
       "WebFetch(domain:eq2.fanbyte.com)",
       "Bash(node -e ' *)",
       "Bash(node scripts/fetch-icons.js)",
-      "Bash(node scripts/fetch-icons.cjs)"
+      "Bash(node scripts/fetch-icons.cjs)",
+      "Bash(node scripts/fetch-spells.js assassin)",
+      "Bash(node --input-type=module --eval ' *)"
     ]
   }
 }

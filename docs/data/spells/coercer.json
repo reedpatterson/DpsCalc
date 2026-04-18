@@ -9,6 +9,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 34,
     "dmgHigh": 46,
     "maxTargetsApi": null,
@@ -19,7 +22,12 @@
       "heroic_op": -1
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 2,
+      "description": "Increases trigger count by 1. | Increases duration by 5 seconds."
+    }
   },
   {
     "uid": "236224690",
@@ -31,6 +39,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 224,
     "dmgHigh": 303,
     "maxTargetsApi": null,
@@ -53,6 +64,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -80,6 +94,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 234,
     "dmgHigh": 286,
     "maxTargetsApi": null,
@@ -102,6 +119,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 227,
     "dmgHigh": 277,
     "maxTargetsApi": null,
@@ -124,6 +144,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -151,6 +174,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -161,7 +187,12 @@
       "heroic_op": 28
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases power heal amount by 5%."
+    }
   },
   {
     "uid": "4183954588",
@@ -173,6 +204,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -183,7 +217,12 @@
       "heroic_op": 24
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Reduces resistibility by 3%."
+    }
   },
   {
     "uid": "1775191602",
@@ -195,6 +234,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -217,6 +259,9 @@
     "targetType": "encounter",
     "isDot": true,
     "dotInterval": 4,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 82,
     "dmgHigh": 100,
     "maxTargetsApi": null,
@@ -239,6 +284,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -249,7 +297,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases spell mitigation reduction of Obliterated Psyche by 4%. | The final tier will add a combat mitigation reduction to Obliterated Psyche."
+    }
   },
   {
     "uid": "1230869570",
@@ -261,6 +314,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -283,6 +339,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 375,
     "dmgHigh": 458,
     "maxTargetsApi": null,
@@ -293,7 +352,12 @@
       "heroic_op": 27
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 2,
+      "description": "Increases trigger count by 1. | Increases duration by 5 seconds."
+    }
   },
   {
     "uid": "80410736",
@@ -305,6 +369,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 339,
     "dmgHigh": 415,
     "maxTargetsApi": null,
@@ -332,6 +399,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -354,6 +424,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": true,
+    "triggerCount": 3,
+    "triggerRatePerMin": null,
     "dmgLow": 297,
     "dmgHigh": 363,
     "maxTargetsApi": null,
@@ -364,7 +437,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 2,
+      "description": "Increases trigger count by 1. | Increases duration by 5 seconds."
+    }
   },
   {
     "uid": "2218337923",
@@ -376,6 +454,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 389,
     "dmgHigh": 475,
     "maxTargetsApi": null,
@@ -403,6 +484,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 6,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 440,
     "dmgHigh": 733,
     "maxTargetsApi": null,
@@ -413,7 +497,12 @@
       "heroic_op": 29
     },
     "isAA": false,
-    "enhanceAA": null
+    "enhanceAA": {
+      "castRedPerTier": 0,
+      "recastRedPerTier": 0,
+      "maxtier": 5,
+      "description": "Increases Arcane resist reduction by 7%."
+    }
   },
   {
     "uid": "79715343",
@@ -425,6 +514,9 @@
     "targetType": "aoe",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 733,
     "dmgHigh": 1221,
     "maxTargetsApi": 8,
@@ -452,6 +544,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -474,6 +569,9 @@
     "targetType": "encounter",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -496,6 +594,9 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
@@ -518,12 +619,90 @@
     "targetType": "st",
     "isDot": false,
     "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 0,
     "dmgHigh": 0,
     "maxTargetsApi": null,
     "aoeRadius": null,
     "icon": {
       "id": 654,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "1051704435",
+    "name": "Spellblade's Counter",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 8,
+    "durationSecs": 0,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 120,
+    "dmgHigh": 201,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 590,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "152789620",
+    "name": "Counterblade",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 12,
+    "durationSecs": 12,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 649,
+    "dmgHigh": 1082,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 606,
+      "backdrop": -1,
+      "heroic_op": -1
+    },
+    "isAA": true,
+    "enhanceAA": null
+  },
+  {
+    "uid": "2685326150",
+    "name": "Nullifying Staff",
+    "level": 70,
+    "castSecs": 0.5,
+    "recastSecs": 30,
+    "durationSecs": 10,
+    "targetType": "st",
+    "isDot": false,
+    "dotInterval": null,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
+    "dmgLow": 151,
+    "dmgHigh": 251,
+    "maxTargetsApi": null,
+    "aoeRadius": null,
+    "icon": {
+      "id": 560,
       "backdrop": -1,
       "heroic_op": -1
     },
@@ -540,6 +719,9 @@
     "targetType": "st",
     "isDot": true,
     "dotInterval": 3,
+    "isTrigger": false,
+    "triggerCount": null,
+    "triggerRatePerMin": null,
     "dmgLow": 2,
     "dmgHigh": 3,
     "maxTargetsApi": null,

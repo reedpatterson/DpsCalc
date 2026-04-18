@@ -27,6 +27,31 @@ function detectTargetType(spell) {
   return { targetType: 'st' };
 }
 
+// Returns { isTrigger, triggerCount, triggerRatePerMin }.
+// Fixed-count:  "Grants a total of X triggers" — multiplied across all indentation levels.
+// Rate-based:   "Triggers about X.X times per minute" — stored as triggerRatePerMin.
+function detectTrigger(spell) {
+  let product        = 1;
+  let foundCount     = false;
+  let triggerRatePerMin = null;
+
+  for (const t of effectTexts(spell)) {
+    let m;
+    m = t.match(/grants?\s+a\s+total\s+of\s+(\d+)\s+triggers?/i);
+    if (m) { product *= parseInt(m[1], 10); foundCount = true; continue; }
+
+    m = t.match(/triggers?\s+about\s+([\d.]+)\s+times?\s+per\s+minute/i);
+    if (m) { triggerRatePerMin = parseFloat(m[1]); }
+  }
+
+  const isTrigger = foundCount || triggerRatePerMin !== null;
+  return {
+    isTrigger,
+    triggerCount:     foundCount        ? product          : null,
+    triggerRatePerMin: triggerRatePerMin !== null ? triggerRatePerMin : null,
+  };
+}
+
 // Returns { isDot, dotInterval } where dotInterval is in seconds.
 function detectDot(spell) {
   for (const t of effectTexts(spell)) {
@@ -91,15 +116,12 @@ function calcSpellDPS(spell, fightInfo, stats) {
     baseRecast = Math.max(0, baseRecast - spell.enhanceAA.recastRedPerTier * spell.aaPoints);
   }
 
-  if (spell.castOverride   !== null) baseCast   = spell.castOverride;
-  if (spell.recastOverride !== null) baseRecast = spell.recastOverride;
-
   // Apply character stats: effective = base * 100 / (100 + stat%)
   // Minimum cast time 0.5 s (EQ2 hard floor).
   const effectiveCast     = Math.max(baseCast, 0.5) * 100 / (100 + castSpeed);
   const effectiveRecast   = Math.max(baseRecast, 0) * 100 / (100 + reuseSpeed);
   const effectiveRecovery = 0.5 * 100 / (100 + recoverySpeed);
-  const cycleSecs = effectiveCast + effectiveRecast + effectiveRecovery;
+  const cycleSecs = effectiveCast + effectiveRecovery;
 
   if (cycleSecs <= 0) return null;
 
@@ -120,7 +142,17 @@ function calcSpellDPS(spell, fightInfo, stats) {
     targetsHit = Math.min(spell.maxTargets || 1, totalMobs);
   }
 
-  const avgDmgPerCast = (avgInitDmg + avgDotDmg) * targetsHit;
+  // Rate-based procs (e.g. "Triggers about 4.0 times per minute") bypass the
+  // cast-cycle model entirely — DPS is simply damage × rate.
+  if (spell.triggerRatePerMin && spell.userTriggerRatePerMin) {
+    const rate = spell.userTriggerRatePerMin / 60;
+    const avgDmg = (avgInitDmg + avgDotDmg) * targetsHit;
+    const dps = avgDmg * rate;
+    return { effectiveCast: 0, effectiveRecast: 0, effectiveRecovery: 0, cycleSecs: 0, targetsHit, avgDmgPerCast: avgDmg, dps };
+  }
+
+  const triggerCount  = spell.isTrigger ? (spell.userTriggerCount || 1) : 1;
+  const avgDmgPerCast = (avgInitDmg + avgDotDmg) * targetsHit * triggerCount;
   const dps = avgDmgPerCast / cycleSecs;
 
   return { effectiveCast, effectiveRecast, effectiveRecovery, cycleSecs, targetsHit, avgDmgPerCast, dps };

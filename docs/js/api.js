@@ -19,13 +19,13 @@ async function loadClassData(classKey, onProgress) {
   return spells.map(s => ({
     ...s,
     enabled:        true,
-    userDmgLow:     s.dmgLow,
-    userDmgHigh:    s.dmgHigh,
-    userDotDmgLow:  s.isDot ? s.dmgLow  : 0,
-    userDotDmgHigh: s.isDot ? s.dmgHigh : 0,
-    maxTargets:     s.targetType === 'st' ? 1 : (s.maxTargetsApi || 4),
-    aaPoints:       0,
-    castOverride:   null,
-    recastOverride: null,
+    userDmgLow:     0,
+    userDmgHigh:    0,
+    userDotDmgLow:  0,
+    userDotDmgHigh: 0,
+    maxTargets:       s.targetType === 'st' ? 1 : (s.maxTargetsApi || 4),
+    userTriggerCount:     s.triggerCount     ? (s.triggerCount)     : null,
+    userTriggerRatePerMin: s.triggerRatePerMin ? (s.triggerRatePerMin) : null,
+    aaPoints:         0,
   }));
 }

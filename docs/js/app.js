@@ -56,15 +56,17 @@ function saveSpells() {
   const state = {};
   for (const s of spells) {
     state[s.uid] = {
-      enabled:        s.enabled,
-      userDmgLow:     s.userDmgLow,
-      userDmgHigh:    s.userDmgHigh,
-      userDotDmgLow:  s.userDotDmgLow,
-      userDotDmgHigh: s.userDotDmgHigh,
-      maxTargets:     s.maxTargets,
-      aaPoints:       s.aaPoints,
-      castOverride:   s.castOverride,
-      recastOverride: s.recastOverride,
+      enabled:               s.enabled,
+      castSecs:              s.castSecs,
+      recastSecs:            s.recastSecs,
+      userDmgLow:            s.userDmgLow,
+      userDmgHigh:           s.userDmgHigh,
+      userDotDmgLow:         s.userDotDmgLow,
+      userDotDmgHigh:        s.userDotDmgHigh,
+      maxTargets:            s.maxTargets,
+      userTriggerCount:      s.userTriggerCount,
+      userTriggerRatePerMin: s.userTriggerRatePerMin,
+      aaPoints:              s.aaPoints,
     };
   }
   lsSet(LS_SPELLS(currentClass), state);
@@ -76,15 +78,17 @@ function restoreSpells(classKey) {
   for (const s of spells) {
     const st = saved[s.uid];
     if (!st) continue;
-    if (st.enabled        != null) s.enabled        = st.enabled;
-    if (st.userDmgLow     != null) s.userDmgLow     = st.userDmgLow;
-    if (st.userDmgHigh    != null) s.userDmgHigh     = st.userDmgHigh;
-    if (st.userDotDmgLow  != null) s.userDotDmgLow  = st.userDotDmgLow;
-    if (st.userDotDmgHigh != null) s.userDotDmgHigh = st.userDotDmgHigh;
-    if (st.maxTargets     != null) s.maxTargets     = st.maxTargets;
-    if (st.aaPoints       != null) s.aaPoints       = st.aaPoints;
-    s.castOverride   = st.castOverride   ?? null;
-    s.recastOverride = st.recastOverride ?? null;
+    if (st.enabled               != null) s.enabled               = st.enabled;
+    if (st.castSecs              != null) s.castSecs              = st.castSecs;
+    if (st.recastSecs            != null) s.recastSecs            = st.recastSecs;
+    if (st.userDmgLow            != null) s.userDmgLow            = st.userDmgLow;
+    if (st.userDmgHigh           != null) s.userDmgHigh           = st.userDmgHigh;
+    if (st.userDotDmgLow         != null) s.userDotDmgLow         = st.userDotDmgLow;
+    if (st.userDotDmgHigh        != null) s.userDotDmgHigh        = st.userDotDmgHigh;
+    if (st.maxTargets            != null) s.maxTargets            = st.maxTargets;
+    if (st.userTriggerCount      != null) s.userTriggerCount      = st.userTriggerCount;
+    if (st.userTriggerRatePerMin != null) s.userTriggerRatePerMin = st.userTriggerRatePerMin;
+    if (st.aaPoints              != null) s.aaPoints              = st.aaPoints;
   }
 }
 
@@ -119,11 +123,9 @@ function populateClassSelect() {
 
 function bindEvents() {
   document.getElementById('classSelect').addEventListener('change', e => {
-    document.getElementById('loadBtn').disabled = !e.target.value;
-    if (e.target.value) applyClassTheme(e.target.value);
+    if (e.target.value) onLoadSpells();
   });
 
-  document.getElementById('loadBtn').addEventListener('click', onLoadSpells);
   document.getElementById('calcBtn').addEventListener('click', onCalculate);
 
   document.getElementById('enableAllBtn').addEventListener('click', () => setAllEnabled(true));
@@ -156,6 +158,7 @@ async function onLoadSpells() {
   showState('loading');
   document.getElementById('calcBtn').disabled = true;
   document.getElementById('resultsSection').classList.add('d-none');
+  document.getElementById('loadStatus').className = 'load-status';
 
   try {
     spells = await loadClassData(classKey, msg => {
@@ -230,18 +233,24 @@ function renderSpellTable() {
       </td>
       <td class="td-muted">${spell.level}</td>
       <td>${TYPE_BADGES[spell.targetType] || ''}</td>
-      <td class="td-muted">${spell.castSecs.toFixed(2)}s</td>
-      <td class="td-muted">${spell.recastSecs.toFixed(1)}s</td>
-      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgLow"
-                 value="${spell.userDmgLow}" min="0" placeholder="low"></td>
-      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgHigh"
-                 value="${spell.userDmgHigh}" min="0" placeholder="high"></td>
+      <td><input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="castSecs"
+                 value="${spell.castSecs}" min="0" step="0.01"></td>
+      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="recastSecs"
+                 value="${spell.recastSecs}" min="0" step="0.1"></td>
+      <td class="dmg-display td-muted" data-dmg-idx="${idx}">${fmtDmgRange(spell)}</td>
       <td><input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="maxTargets"
                  value="${spell.maxTargets}" min="1" max="24"
                  title="${spell.aoeRadius ? `AoE radius: ${spell.aoeRadius}m` : ''}"></td>
       <td>${aaCell}</td>
-      <td><button class="expand-btn" data-idx="${idx}" title="More options">▾</button></td>
     `;
+    tr.addEventListener('click', e => {
+      if (e.target.closest('input, button, select, a')) return;
+      const expRow = tbody.querySelector(`tr[data-exp-idx="${idx}"]`);
+      if (expRow) {
+        expRow.classList.toggle('d-none');
+        tr.classList.toggle('row-expanded', !expRow.classList.contains('d-none'));
+      }
+    });
     tbody.appendChild(tr);
 
     // Expand row
@@ -251,22 +260,22 @@ function renderSpellTable() {
 
     const dotSection = spell.isDot ? `
       <div class="expand-field">
-        <span class="expand-label">DoT Interval</span>
+        <span class="expand-label">DoT/tick Low</span>
+        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgLow"
+               value="${spell.userDotDmgLow || ''}" min="0" placeholder="tooltip">
+      </div>
+      <div class="expand-field">
+        <span class="expand-label">DoT/tick High</span>
+        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgHigh"
+               value="${spell.userDotDmgHigh || ''}" min="0" placeholder="tooltip">
+      </div>
+      <div class="expand-field">
+        <span class="expand-label">Tick every</span>
         <span class="expand-value">${spell.dotInterval}s</span>
       </div>
       <div class="expand-field">
-        <span class="expand-label">DoT Duration</span>
+        <span class="expand-label">Duration</span>
         <span class="expand-value">${spell.durationSecs}s</span>
-      </div>
-      <div class="expand-field">
-        <span class="expand-label">DoT Dmg/tick Low</span>
-        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgLow"
-               value="${spell.userDotDmgLow}" min="0">
-      </div>
-      <div class="expand-field">
-        <span class="expand-label">DoT Dmg/tick High</span>
-        <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgHigh"
-               value="${spell.userDotDmgHigh}" min="0">
       </div>` : '';
 
     const enhNote = spell.enhanceAA
@@ -274,50 +283,38 @@ function renderSpellTable() {
       : '';
 
     trExp.innerHTML = `
-      <td colspan="11">
+      <td colspan="9">
         ${enhNote}
         <div class="expand-inner">
+          <div class="expand-field">
+            <span class="expand-label">Dmg Low</span>
+            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgLow"
+                   value="${spell.userDmgLow || ''}" min="0" placeholder="tooltip">
+          </div>
+          <div class="expand-field">
+            <span class="expand-label">Dmg High</span>
+            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgHigh"
+                   value="${spell.userDmgHigh || ''}" min="0" placeholder="tooltip">
+          </div>
+          ${spell.triggerCount ? `
+          <div class="expand-field">
+            <span class="expand-label">Triggers</span>
+            <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerCount"
+                   value="${spell.userTriggerCount}" min="1" title="Total damage hits per cast">
+          </div>` : ''}
+          ${spell.triggerRatePerMin ? `
+          <div class="expand-field">
+            <span class="expand-label">Triggers/min</span>
+            <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerRatePerMin"
+                   value="${spell.userTriggerRatePerMin}" min="0" step="0.1" title="How many times per minute this triggers">
+          </div>` : ''}
           ${dotSection}
-          <div class="expand-field">
-            <span class="expand-label">Cast Override (s)</span>
-            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="castOverride"
-                   value="${spell.castOverride ?? ''}" min="0" step="0.01" placeholder="—">
-          </div>
-          <div class="expand-field">
-            <span class="expand-label">Recast Override (s)</span>
-            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="recastOverride"
-                   value="${spell.recastOverride ?? ''}" min="0" step="0.1" placeholder="—">
-          </div>
-          <div class="expand-field" style="justify-content:flex-end">
-            <button class="btn-clear" data-idx="${idx}" data-action="clearOverrides">Clear overrides</button>
-          </div>
         </div>
       </td>
     `;
     tbody.appendChild(trExp);
   });
 
-  tbody.querySelectorAll('.expand-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const idx = btn.dataset.idx;
-      const expRow = tbody.querySelector(`tr[data-exp-idx="${idx}"]`);
-      if (expRow) {
-        expRow.classList.toggle('d-none');
-        btn.textContent = expRow.classList.contains('d-none') ? '▾' : '▴';
-      }
-    });
-  });
-
-  tbody.querySelectorAll('[data-action="clearOverrides"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const idx = parseInt(btn.dataset.idx, 10);
-      spells[idx].castOverride   = null;
-      spells[idx].recastOverride = null;
-      const expRow = tbody.querySelector(`tr[data-exp-idx="${idx}"]`);
-      expRow.querySelector('[data-field="castOverride"]').value   = '';
-      expRow.querySelector('[data-field="recastOverride"]').value = '';
-    });
-  });
 }
 
 // ── Spell field change handler ─────────────────────────────────────────────
@@ -341,6 +338,8 @@ function onSpellFieldChange(e) {
     const val = parseFloat(el.value);
     if (!isNaN(val)) spell[field] = val;
   }
+
+  if (['userDmgLow', 'userDmgHigh'].includes(field)) updateDmgDisplay(idx);
 
   saveSpells();
 }
@@ -422,6 +421,16 @@ function renderResults(results) {
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
+
+function fmtDmgRange(spell) {
+  if (!spell.userDmgLow && !spell.userDmgHigh) return '<span style="opacity:.35">—</span>';
+  return `${fmt(spell.userDmgLow)} – ${fmt(spell.userDmgHigh)}`;
+}
+
+function updateDmgDisplay(idx) {
+  const cell = document.querySelector(`td.dmg-display[data-dmg-idx="${idx}"]`);
+  if (cell) cell.innerHTML = fmtDmgRange(spells[idx]);
+}
 
 function spellIconHtml(spell) {
   if (!spell.icon || !spell.icon.id) return '';

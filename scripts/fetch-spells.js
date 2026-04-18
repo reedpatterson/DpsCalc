@@ -134,6 +134,28 @@ function detectTargetType(spell) {
   return 'st';
 }
 
+function detectTrigger(spell) {
+  let product        = 1;
+  let foundCount     = false;
+  let triggerRatePerMin = null;
+
+  for (const t of effectTexts(spell)) {
+    let m;
+    m = t.match(/grants?\s+a\s+total\s+of\s+(\d+)\s+triggers?/i);
+    if (m) { product *= parseInt(m[1], 10); foundCount = true; continue; }
+
+    m = t.match(/triggers?\s+about\s+([\d.]+)\s+times?\s+per\s+minute/i);
+    if (m) { triggerRatePerMin = parseFloat(m[1]); }
+  }
+
+  const isTrigger = foundCount || triggerRatePerMin !== null;
+  return {
+    isTrigger,
+    triggerCount:      foundCount           ? product          : null,
+    triggerRatePerMin: triggerRatePerMin !== null ? triggerRatePerMin : null,
+  };
+}
+
 function detectDot(spell) {
   for (const t of effectTexts(spell)) {
     const m = t.match(/every\s+([\d.]+)\s+seconds?/i);
@@ -175,7 +197,8 @@ function processRawSpell(raw, isAA) {
   const recastSecs   = raw.recast_secs || 0;
   const durationSecs = ((raw.duration || {}).min_sec_tenths || 0) / 10;
   const targetType   = detectTargetType(raw);
-  const { isDot, dotInterval } = detectDot(raw);
+  const { isDot, dotInterval }       = detectDot(raw);
+  const { isTrigger, triggerCount, triggerRatePerMin } = detectTrigger(raw);
   const { dmgLow, dmgHigh } = parseBaseDamage(raw);
 
   return {
@@ -188,6 +211,9 @@ function processRawSpell(raw, isAA) {
     targetType,
     isDot,
     dotInterval,
+    isTrigger,
+    triggerCount,
+    triggerRatePerMin,
     dmgLow,
     dmgHigh,
     maxTargetsApi: raw.max_targets || null,
@@ -216,7 +242,7 @@ function buildSpellList(baseSpells, nodeByCrc, crcResults) {
     const node = nodeByCrc.get(crc);
     if (!node || !spells.length) continue;
 
-    const combat = spells.filter(s => s.beneficial === 0 && s.type === 'spells');
+    const combat = spells.filter(s => s.beneficial === 0 && (s.type === 'spells' || s.type === 'arts'));
     if (combat.length) {
       const best = combat.sort((a, b) => b.level - a.level)[0];
       combatAASpells.push(processRawSpell(best, true));
@@ -229,14 +255,12 @@ function buildSpellList(baseSpells, nodeByCrc, crcResults) {
       const tier1s = enh.filter(s => s.tier === 1).sort((a, b) => b.level - a.level);
       const ref = tier1s[0] || enh[0];
       const parsed = parseEnhanceAA(ref);
-      if (parsed.castRedPerTier > 0 || parsed.recastRedPerTier > 0) {
-        const targetName = (ref.name || '').replace(/^Enhance:\s*/i, '').trim().toLowerCase();
-        enhanceAAs.set(targetName, {
-          ...parsed,
-          maxtier: node.maxtier || 5,
-          description: (ref.effect_list || []).map(e => e.description).join(' | '),
-        });
-      }
+      const targetName = (ref.name || '').replace(/^Enhance:\s*/i, '').trim().toLowerCase();
+      enhanceAAs.set(targetName, {
+        ...parsed,
+        maxtier: node.maxtier || 5,
+        description: (ref.effect_list || []).map(e => e.description).join(' | '),
+      });
     }
   }
 
