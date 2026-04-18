@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQ2 DPS Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="app-nav">
+  <span class="app-nav-brand">EQ2 DPS Calculator</span>
+  <span class="app-nav-sub">— RoK Era (Levels 1–80)</span>
+</nav>
+
+<div class="app-layout">
+
+  <!-- ── Sidebar ──────────────────────────────────────────────────────── -->
+  <aside class="app-sidebar">
+
+    <!-- Class Loader -->
+    <div class="panel">
+      <div class="panel-header">Character Class</div>
+      <div class="panel-body">
+        <select id="classSelect" class="form-input">
+          <option value="">— select class —</option>
+        </select>
+        <div id="loadStatus" class="load-status"></div>
+      </div>
+    </div>
+
+    <!-- Character Stats -->
+    <div class="panel">
+      <div class="panel-header">Character Stats</div>
+      <div class="panel-body">
+        <div class="field">
+          <label class="field-label">
+            Cast Speed %
+            <span class="tip" title="Reduces casting time. e.g. 100 = half cast time.">ⓘ</span>
+          </label>
+          <input type="number" id="castSpeed" class="form-input" value="0" min="0">
+        </div>
+        <div class="field">
+          <label class="field-label">
+            Reuse Speed %
+            <span class="tip" title="Reduces recast time. e.g. 100 = half recast time.">ⓘ</span>
+          </label>
+          <input type="number" id="reuseSpeed" class="form-input" value="0" min="0">
+        </div>
+        <div class="field">
+          <label class="field-label">
+            Recovery Speed %
+            <span class="tip" title="Reduces recovery time. Base recovery is 0.5s.">ⓘ</span>
+          </label>
+          <input type="number" id="recoverySpeed" class="form-input" value="0" min="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Fight Info -->
+    <div class="panel">
+      <div class="panel-header">Fight Info</div>
+      <div class="panel-body">
+        <div class="field">
+          <label class="field-label">Duration (seconds)</label>
+          <input type="number" id="fightDuration" class="form-input" value="60" min="1">
+        </div>
+        <div class="field">
+          <label class="field-label">Total Mobs</label>
+          <input type="number" id="totalMobs" class="form-input" value="1" min="1">
+        </div>
+        <div class="field">
+          <label class="field-label">Linked Mobs</label>
+          <input type="number" id="linkedMobs" class="form-input" value="1" min="1">
+        </div>
+      </div>
+    </div>
+
+    <button id="calcBtn" class="btn-calc" disabled>Calculate DPS</button>
+
+  </aside>
+
+  <!-- ── Main content ─────────────────────────────────────────────────── -->
+  <main class="app-main">
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state">
+      <div class="empty-glyph">⚔</div>
+      <p>Select a class and click <strong>Load Spells</strong> to begin.</p>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loadingState" class="loading-state d-none">
+      <div class="spinner"></div>
+      <p class="loading-msg" id="loadingMsg">Fetching spells…</p>
+    </div>
+
+    <!-- Spell table -->
+    <div id="spellSection" class="d-none">
+      <div class="section-bar">
+        <span class="section-title" id="spellSectionTitle">Spells</span>
+        <div class="section-controls">
+          <input type="text" id="spellSearch" class="input-search" placeholder="Filter spells…">
+          <button id="enableAllBtn" class="btn-ghost">Enable All</button>
+          <button id="disableAllBtn" class="btn-ghost">Disable All</button>
+        </div>
+      </div>
+
+      <div class="info-notice">
+        AA points currently only apply cast &amp; recast speed reductions — damage bonuses from AAs are not calculated automatically.
+        Enter damage values from your in-game spell tooltips.
+      </div>
+
+      <div id="spellList" class="spell-list"></div>
+    </div>
+
+    <!-- Results -->
+    <div id="resultsSection" class="d-none">
+      <hr class="results-divider">
+      <div class="results-title">DPS Results</div>
+      <div class="table-scroll">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Spell</th>
+              <th>Type</th>
+              <th>Eff. Cast</th>
+              <th>Eff. Recast</th>
+              <th>Targets</th>
+              <th>Avg Dmg/Cast</th>
+              <th style="text-align:right">DPS</th>
+              <th style="text-align:right">Rel.</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/parse.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
