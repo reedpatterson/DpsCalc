@@ -362,45 +362,81 @@ select.form-input option { background: #1a1d2e; }
 
 .table-scroll { overflow-x: auto; }
 
-.spell-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.80rem;
+.spell-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.spell-table thead th {
-  background: var(--surface);
+.spell-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.spell-card:hover { border-color: var(--border-2); }
+
+.spell-card.row-expanded { border-color: var(--accent-border); transition: border-color 0.55s ease; }
+
+.spell-card.row-disabled .spell-main-inner { opacity: 0.35; }
+
+.spell-card-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.spell-card-main:hover,
+.spell-card.row-expanded .spell-card-main { background: var(--bg-hover); }
+
+.spell-main-inner {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px 16px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.spell-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 200px;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.lvl-badge {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.spell-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: flex-end;
+  min-width: 0;
+}
+
+.spell-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.spell-field-lbl {
+  font-size: 0.64rem;
   color: var(--text-2);
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 9px 10px;
+  letter-spacing: 0.04em;
   white-space: nowrap;
-  border-bottom: 2px solid var(--accent-border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  transition: border-color 0.55s ease;
 }
-
-.spell-table thead th:first-child { border-radius: var(--radius-sm) 0 0 0; }
-.spell-table thead th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
-
-.spell-table tbody td {
-  padding: 7px 10px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: middle;
-  white-space: nowrap;
-  color: var(--text);
-}
-
-.spell-table tbody tr[data-idx] { cursor: pointer; }
-.spell-table tbody tr[data-idx]:hover > td { background: var(--bg-hover); }
-.spell-table tbody tr.row-expanded > td { background: var(--bg-hover); }
-
-.spell-table tbody tr.row-disabled > td { opacity: 0.35; }
-.spell-table tbody tr.row-disabled > td:first-child { opacity: 1; }
 
 /* ── Spell icon ───────────────────────────────────────────────────────────── */
 .spell-icon {
@@ -500,39 +536,11 @@ select.form-input option { background: #1a1d2e; }
 .tbl-input::-webkit-inner-spin-button { -webkit-appearance: none; }
 .tbl-input:focus { border-color: var(--accent-border); }
 
-/* ── Expand row ───────────────────────────────────────────────────────────── */
-.expand-row > td {
-  background: rgba(0,0,0,0.28) !important;
-  border-top: none;
-  padding: 12px 18px 14px;
-}
-
-.expand-inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: flex-end;
-}
-
-.expand-field { display: flex; flex-direction: column; gap: 4px; }
-
-.expand-label {
-  font-size: 0.68rem;
-  color: var(--text-2);
-  letter-spacing: 0.04em;
-}
-
-.expand-value {
-  font-size: 0.78rem;
-  color: var(--text-2);
-  padding: 3px 0;
-}
-
-.expand-sep {
-  width: 1px;
-  background: var(--border-2);
-  align-self: stretch;
-  margin: 0 4px;
+/* ── Spell expand ─────────────────────────────────────────────────────────── */
+.spell-expand {
+  background: rgba(0,0,0,0.28);
+  border-top: 1px solid var(--border);
+  padding: 10px 14px;
 }
 
 .aa-note {

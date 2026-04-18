@@ -143,8 +143,8 @@ function bindEvents() {
     document.getElementById(id).addEventListener('input', saveFight)
   );
 
-  document.getElementById('spellTableBody').addEventListener('change', onSpellFieldChange);
-  document.getElementById('spellTableBody').addEventListener('input', onSpellFieldChange);
+  document.getElementById('spellList').addEventListener('change', onSpellFieldChange);
+  document.getElementById('spellList').addEventListener('input', onSpellFieldChange);
 }
 
 // ── Load spells ────────────────────────────────────────────────────────────
@@ -199,7 +199,7 @@ function showStatus(msg, level) {
   el.textContent = msg;
 }
 
-// ── Render spell table ─────────────────────────────────────────────────────
+// ── Render spell list ──────────────────────────────────────────────────────
 
 const TYPE_BADGES = {
   st:        '<span class="tbadge tbadge-st">ST</span>',
@@ -208,113 +208,115 @@ const TYPE_BADGES = {
 };
 
 function renderSpellTable() {
-  const tbody = document.getElementById('spellTableBody');
-  tbody.innerHTML = '';
+  const list = document.getElementById('spellList');
+  list.innerHTML = '';
 
   spells.forEach((spell, idx) => {
-    const tr = document.createElement('tr');
-    tr.dataset.idx  = idx;
-    tr.dataset.name = spell.name.toLowerCase();
-    if (!spell.enabled) tr.classList.add('row-disabled');
+    const card = document.createElement('div');
+    card.className = `spell-card${spell.enabled ? '' : ' row-disabled'}`;
+    card.dataset.idx  = idx;
+    card.dataset.name = spell.name.toLowerCase();
 
-    const aaCell = spell.enhanceAA
-      ? `<input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="aaPoints"
-               value="${spell.aaPoints}" min="0" max="${spell.enhanceAA.maxtier}"
-               title="${escHtml(spell.enhanceAA.description)}">`
-      : '<span class="td-muted">—</span>';
+    const aaFieldHtml = spell.enhanceAA
+      ? `<div class="spell-field">
+           <span class="spell-field-lbl">AA Pts</span>
+           <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="aaPoints"
+                  value="${spell.aaPoints}" min="0" max="${spell.enhanceAA.maxtier}"
+                  title="${escHtml(spell.enhanceAA.description)}">
+         </div>`
+      : '';
 
-    tr.innerHTML = `
-      <td><input type="checkbox" class="spell-check" data-idx="${idx}" data-field="enabled"
-                 ${spell.enabled ? 'checked' : ''}></td>
-      <td>
-        ${spellIconHtml(spell)}
-        <span class="spell-name${spell.isAA ? ' is-aa' : ''}">${escHtml(spell.name)}</span>
-        ${spell.isAA ? '<span class="aa-badge">AA</span>' : ''}
-      </td>
-      <td class="td-muted">${spell.level}</td>
-      <td>${TYPE_BADGES[spell.targetType] || ''}</td>
-      <td><input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="castSecs"
-                 value="${spell.castSecs}" min="0" step="0.01"></td>
-      <td><input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="recastSecs"
-                 value="${spell.recastSecs}" min="0" step="0.1"></td>
-      <td class="dmg-display td-muted" data-dmg-idx="${idx}">${fmtDmgRange(spell)}</td>
-      <td><input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="maxTargets"
-                 value="${spell.maxTargets}" min="1" max="24"
-                 title="${spell.aoeRadius ? `AoE radius: ${spell.aoeRadius}m` : ''}"></td>
-      <td>${aaCell}</td>
-    `;
-    tr.addEventListener('click', e => {
-      if (e.target.closest('input, button, select, a')) return;
-      const expRow = tbody.querySelector(`tr[data-exp-idx="${idx}"]`);
-      if (expRow) {
-        expRow.classList.toggle('d-none');
-        tr.classList.toggle('row-expanded', !expRow.classList.contains('d-none'));
-      }
-    });
-    tbody.appendChild(tr);
-
-    // Expand row
-    const trExp = document.createElement('tr');
-    trExp.className = 'expand-row d-none';
-    trExp.dataset.expIdx = idx;
-
-    const dotSection = spell.isDot ? `
-      <div class="expand-field">
-        <span class="expand-label">DoT/tick Low</span>
+    const dotFieldsHtml = spell.isDot ? `
+      <div class="spell-field">
+        <span class="spell-field-lbl">DoT Low</span>
         <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgLow"
                value="${spell.userDotDmgLow || ''}" min="0" placeholder="tooltip">
       </div>
-      <div class="expand-field">
-        <span class="expand-label">DoT/tick High</span>
+      <div class="spell-field">
+        <span class="spell-field-lbl">DoT High</span>
         <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDotDmgHigh"
                value="${spell.userDotDmgHigh || ''}" min="0" placeholder="tooltip">
-      </div>
-      <div class="expand-field">
-        <span class="expand-label">Tick every</span>
-        <span class="expand-value">${spell.dotInterval}s</span>
-      </div>
-      <div class="expand-field">
-        <span class="expand-label">Duration</span>
-        <span class="expand-value">${spell.durationSecs}s</span>
       </div>` : '';
 
-    const enhNote = spell.enhanceAA
-      ? `<div class="aa-note"><strong>AA:</strong> ${escHtml(spell.enhanceAA.description)} (max ${spell.enhanceAA.maxtier} pts)</div>`
+    const triggerFieldsHtml = `
+      ${spell.triggerCount ? `
+      <div class="spell-field">
+        <span class="spell-field-lbl">Triggers</span>
+        <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerCount"
+               value="${spell.userTriggerCount}" min="1" title="Total damage hits per cast">
+      </div>` : ''}
+      ${spell.triggerRatePerMin ? `
+      <div class="spell-field">
+        <span class="spell-field-lbl">Triggers/min</span>
+        <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerRatePerMin"
+               value="${spell.userTriggerRatePerMin}" min="0" step="0.1">
+      </div>` : ''}`;
+
+    const enhNoteHtml = spell.enhanceAA
+      ? `<div class="spell-expand d-none" data-exp-idx="${idx}">
+           <div class="aa-note"><strong>AA:</strong> ${escHtml(spell.enhanceAA.description)} (max ${spell.enhanceAA.maxtier} pts)</div>
+         </div>`
       : '';
 
-    trExp.innerHTML = `
-      <td colspan="9">
-        ${enhNote}
-        <div class="expand-inner">
-          <div class="expand-field">
-            <span class="expand-label">Dmg Low</span>
-            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgLow"
-                   value="${spell.userDmgLow || ''}" min="0" placeholder="tooltip">
+    card.innerHTML = `
+      <div class="spell-card-main">
+        <input type="checkbox" class="spell-check" data-idx="${idx}" data-field="enabled"
+               ${spell.enabled ? 'checked' : ''}>
+        <div class="spell-main-inner">
+          <div class="spell-info">
+            ${spellIconHtml(spell)}
+            <span class="spell-name${spell.isAA ? ' is-aa' : ''}">${escHtml(spell.name)}</span>
+            ${spell.isAA ? '<span class="aa-badge">AA</span>' : ''}
+            <span class="lvl-badge">${spell.level}</span>
+            ${TYPE_BADGES[spell.targetType] || ''}
           </div>
-          <div class="expand-field">
-            <span class="expand-label">Dmg High</span>
-            <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgHigh"
-                   value="${spell.userDmgHigh || ''}" min="0" placeholder="tooltip">
+          <div class="spell-fields">
+            <div class="spell-field">
+              <span class="spell-field-lbl">Cast</span>
+              <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="castSecs"
+                     value="${spell.castSecs}" min="0" step="0.01">
+            </div>
+            <div class="spell-field">
+              <span class="spell-field-lbl">Recast</span>
+              <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="recastSecs"
+                     value="${spell.recastSecs}" min="0" step="0.1">
+            </div>
+            <div class="spell-field">
+              <span class="spell-field-lbl">Dmg Low</span>
+              <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgLow"
+                     value="${spell.userDmgLow || ''}" min="0" placeholder="tooltip">
+            </div>
+            <div class="spell-field">
+              <span class="spell-field-lbl">Dmg High</span>
+              <input type="number" class="tbl-input num-sm" data-idx="${idx}" data-field="userDmgHigh"
+                     value="${spell.userDmgHigh || ''}" min="0" placeholder="tooltip">
+            </div>
+            ${dotFieldsHtml}
+            ${triggerFieldsHtml}
+            <div class="spell-field">
+              <span class="spell-field-lbl">Max Targets</span>
+              <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="maxTargets"
+                     value="${spell.maxTargets}" min="1" max="24"
+                     ${spell.aoeRadius ? `title="AoE radius: ${spell.aoeRadius}m"` : ''}>
+            </div>
+            ${aaFieldHtml}
           </div>
-          ${spell.triggerCount ? `
-          <div class="expand-field">
-            <span class="expand-label">Triggers</span>
-            <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerCount"
-                   value="${spell.userTriggerCount}" min="1" title="Total damage hits per cast">
-          </div>` : ''}
-          ${spell.triggerRatePerMin ? `
-          <div class="expand-field">
-            <span class="expand-label">Triggers/min</span>
-            <input type="number" class="tbl-input num-xs" data-idx="${idx}" data-field="userTriggerRatePerMin"
-                   value="${spell.userTriggerRatePerMin}" min="0" step="0.1" title="How many times per minute this triggers">
-          </div>` : ''}
-          ${dotSection}
         </div>
-      </td>
+      </div>
+      ${enhNoteHtml}
     `;
-    tbody.appendChild(trExp);
-  });
 
+    card.addEventListener('click', e => {
+      if (e.target.closest('input, button, select, a')) return;
+      const expEl = card.querySelector('.spell-expand');
+      if (expEl) {
+        expEl.classList.toggle('d-none');
+        card.classList.toggle('row-expanded', !expEl.classList.contains('d-none'));
+      }
+    });
+
+    list.appendChild(card);
+  });
 }
 
 // ── Spell field change handler ─────────────────────────────────────────────
@@ -330,16 +332,12 @@ function onSpellFieldChange(e) {
 
   if (field === 'enabled') {
     spell.enabled = el.checked;
-    const mainRow = document.querySelector(`tr[data-idx="${idx}"]`);
-    mainRow && mainRow.classList.toggle('row-disabled', !spell.enabled);
-  } else if (field === 'castOverride' || field === 'recastOverride') {
-    spell[field] = el.value !== '' ? parseFloat(el.value) : null;
+    const card = document.querySelector(`div.spell-card[data-idx="${idx}"]`);
+    card && card.classList.toggle('row-disabled', !spell.enabled);
   } else {
     const val = parseFloat(el.value);
     if (!isNaN(val)) spell[field] = val;
   }
-
-  if (['userDmgLow', 'userDmgHigh'].includes(field)) updateDmgDisplay(idx);
 
   saveSpells();
 }
@@ -351,8 +349,8 @@ function setAllEnabled(enabled) {
     spell.enabled = enabled;
     const checkbox = document.querySelector(`input[data-idx="${idx}"][data-field="enabled"]`);
     if (checkbox) checkbox.checked = enabled;
-    const row = document.querySelector(`tr[data-idx="${idx}"]`);
-    if (row) row.classList.toggle('row-disabled', !enabled);
+    const card = document.querySelector(`div.spell-card[data-idx="${idx}"]`);
+    if (card) card.classList.toggle('row-disabled', !enabled);
   });
   saveSpells();
 }
@@ -360,11 +358,14 @@ function setAllEnabled(enabled) {
 // ── Filter spell rows ──────────────────────────────────────────────────────
 
 function filterSpellRows(query) {
-  document.querySelectorAll('#spellTableBody tr[data-idx]').forEach(row => {
-    const visible = !query || (row.dataset.name || '').includes(query);
-    row.classList.toggle('d-none', !visible);
-    const expRow = document.querySelector(`tr[data-exp-idx="${row.dataset.idx}"]`);
-    if (expRow && !visible) expRow.classList.add('d-none');
+  document.querySelectorAll('#spellList .spell-card').forEach(card => {
+    const visible = !query || (card.dataset.name || '').includes(query);
+    card.classList.toggle('d-none', !visible);
+    if (!visible) {
+      const exp = card.querySelector('.spell-expand');
+      if (exp) exp.classList.add('d-none');
+      card.classList.remove('row-expanded');
+    }
   });
 }
 
@@ -421,16 +422,6 @@ function renderResults(results) {
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
-
-function fmtDmgRange(spell) {
-  if (!spell.userDmgLow && !spell.userDmgHigh) return '<span style="opacity:.35">—</span>';
-  return `${fmt(spell.userDmgLow)} – ${fmt(spell.userDmgHigh)}`;
-}
-
-function updateDmgDisplay(idx) {
-  const cell = document.querySelector(`td.dmg-display[data-dmg-idx="${idx}"]`);
-  if (cell) cell.innerHTML = fmtDmgRange(spells[idx]);
-}
 
 function spellIconHtml(spell) {
   if (!spell.icon || !spell.icon.id) return '';
